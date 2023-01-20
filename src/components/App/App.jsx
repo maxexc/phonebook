@@ -1,4 +1,7 @@
-export const App = () => {
+import React from 'react'
+
+
+const App = () => {
   return (
     <div
       style={{
@@ -14,3 +17,5 @@ export const App = () => {
     </div>
   );
 };
+
+export default App;
