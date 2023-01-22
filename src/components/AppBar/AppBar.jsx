@@ -1,3 +1,4 @@
+import { AuthNav } from "components/AuthNav/AuthNav";
 import { Header } from "./AppBar.styled";
 
 
@@ -6,8 +7,8 @@ export const AppBar = () => {
   
     return (
       <Header >
-        <navigation />
-        {isLoggedIn ? <div>UserMenu</div>  : <div>AuthNav</div>}
+        <span />
+        {isLoggedIn ? <div>UserMenu</div>  : <AuthNav />}
       </Header>
     );
   };
