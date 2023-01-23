@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { MenuLink } from './Navigation.styled';
 
 const styles = {
   link: {
@@ -16,18 +17,17 @@ const styles = {
 
 const Navigation = () => (
   <nav>
-    <NavLink to="/" exact style={styles.link} activeStyle={styles.activeLink}>
+    <MenuLink to="/" >
+    {/* <MenuLink to="/" > */}
       Главная
-    </NavLink>
+    </MenuLink>
 
-    <NavLink
+    <MenuLink
       to="/contacts"
-      exact
-      style={styles.link}
-      activeStyle={styles.activeLink}
+      
     >
       Контакты
-    </NavLink>
+    </MenuLink>
   </nav>
 );
 

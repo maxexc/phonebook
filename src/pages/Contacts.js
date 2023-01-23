@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchTasks } from 'redux/contacts/operations';
 import { selectLoading } from 'redux/contacts/selectors';
 import { ContactList } from 'components/ContactList/ContactList';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
 
 export default function Contacts() {
   const dispatch = useDispatch();
@@ -21,7 +22,11 @@ export default function Contacts() {
         <title>Your Contacts</title>
       </main>
       {/* <TaskEditor /> */}
-      <h2> Your Contacts </h2>
+        <h2> 
+            <AccountBoxIcon fontSize="large" sx={{ mr: 1 }} />
+                 Your Contacts 
+        </h2>
+      
       <div>{isLoading && 'Request in progress...'}</div>
       <ContactList />
     </>
