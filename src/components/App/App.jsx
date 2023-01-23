@@ -1,4 +1,5 @@
 import { Layout } from 'components/Layout/Layout';
+import Contacts from 'pages/Contacts';
 import Home from 'pages/Home';
 import LoginView from 'pages/Login';
 import Register from 'pages/Register';
@@ -13,6 +14,7 @@ const App = () => {
       <Route index element={<Home/>}/>
         <Route path="/login" element={<LoginView />} />
         <Route path="/register" element={<Register />} />
+        <Route path='/contacts' element={<Contacts />} />
 
         
       </Route>
