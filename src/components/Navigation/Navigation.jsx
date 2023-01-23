@@ -21,12 +21,12 @@ const Navigation = () => (
     </NavLink>
 
     <NavLink
-      to="/todos"
+      to="/contacts"
       exact
       style={styles.link}
       activeStyle={styles.activeLink}
     >
-      Заметки
+      Контакты
     </NavLink>
   </nav>
 );
