@@ -1,10 +1,12 @@
+import React from 'react'
 import { Layout } from 'components/Layout/Layout';
-import Contacts from 'pages/Contacts';
+import { Route, Routes } from 'react-router-dom';
+
+
 import Home from 'pages/Home';
 import LoginView from 'pages/Login';
 import Register from 'pages/Register';
-import React from 'react'
-import { Route, Routes } from 'react-router-dom';
+import Contacts from 'pages/Contacts';
 
 
 const App = () => {
