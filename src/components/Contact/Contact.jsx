@@ -1,6 +1,6 @@
 // import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { deleteTask } from 'redux/contacts/operations';
+import { deleteContact } from 'redux/contacts/operations';
 // import { deleteContact } from 'redux/contacts/operations';
 
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
@@ -11,7 +11,7 @@ export const Contact = ({ id, number, name }) => {
   const dispatch = useDispatch();
 
   const onDelete = () => {
-    dispatch(deleteTask(id));
+    dispatch(deleteContact(id));
   };
 
   return (
