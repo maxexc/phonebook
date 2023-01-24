@@ -3,19 +3,14 @@ import React from 'react';
 import { MenuLink } from './Navigation.styled';
 
 
-
 const Navigation = () => (
   <nav>
     <MenuLink to="/" >
-    {/* <MenuLink to="/" > */}
-      Главная
+      Home
     </MenuLink>
 
-    <MenuLink
-      to="/contacts"
-      
-    >
-      Контакты
+    <MenuLink to="/contacts">
+      Contacts
     </MenuLink>
   </nav>
 );
