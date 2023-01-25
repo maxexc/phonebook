@@ -1,4 +1,4 @@
-import { useAuth } from "hooks";
+import { useAuth } from "../../hooks/useAuth";
 import React, { useEffect } from 'react'
 import { Layout } from 'components/Layout/Layout';
 import { Route, Routes } from 'react-router-dom';
