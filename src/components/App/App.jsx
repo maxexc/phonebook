@@ -4,9 +4,10 @@ import { Route, Routes } from 'react-router-dom';
 
 
 import Home from 'pages/Home';
-import LoginView from 'pages/Login';
+import Login from 'pages/Login';
 import Register from 'pages/Register';
 import Contacts from 'pages/Contacts';
+
 
 
 const App = () => {
@@ -14,7 +15,7 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home/>}/>
-        <Route path="/login" element={<LoginView />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path='/contacts' element={<Contacts />} />        
       </Route>

@@ -1,5 +1,5 @@
 import { RegisterForm } from 'components/RegisterForm/RegisterForm';
-import { Title } from './Login.styled';
+import { Title } from './Title.styled';
 
 const Register = () => {
   return (
