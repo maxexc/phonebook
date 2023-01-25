@@ -16,7 +16,7 @@ export const Contact = ({ id, number, name }) => {
 
   return (
     <>
-      <Item>
+      <Item >
         <AccountBoxIcon fontSize="large" sx={{ mr: 1 }} />
         <p>
           {name}: <span>{number}</span>
