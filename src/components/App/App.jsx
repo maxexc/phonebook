@@ -13,7 +13,7 @@ import Contacts from 'pages/Contacts';
 
 const App = () => {
   const dispatch = useDispatch();
-  const { isRefreshing } = useAuth;
+  const { isRefreshing } = useAuth();
 
   useEffect(() => {
     dispatch(refreshUser())
