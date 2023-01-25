@@ -6,3 +6,11 @@ export const Title = styled.h1`
   text-align: center;
   margin-bottom: 20px;
 `;
+
+export const Main = styled.main`
+display: flex;
+flex-direction: column;
+/* justify-content: center; */
+align-items: center;
+  margin: 0 auto;
+`

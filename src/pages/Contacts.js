@@ -7,30 +7,36 @@ import { selectLoading } from 'redux/contacts/selectors';
 
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import ContactForm from 'components/ContactAddForm/ContactAddForm';
+import { Main } from './Title.styled';
+import { useAuth } from 'Hooks';
 // import { ContactForm } from 'components/ContactAddForm/ContactAddForm';
 
 export default function Contacts() {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectLoading);
+  const { isLoggedIn } = useAuth();
 
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
 
   return (
-    <main>
-      <main>
-        <title>Your Contacts</title>
-      </main>      
+    <Main>
+      {isLoggedIn ? (
         <h2> 
             <AccountBoxIcon fontSize="large" sx={{ mr: 1 }} />
                  Your Contacts 
-        </h2>
-        <Filter />
-        <ContactForm />
-      <div>{isLoading && 'Request in progress...'}</div>
+        </h2>,
+        <Filter />,
+        <ContactForm />,
+      <div>{isLoading && 'Request in progress...'}</div>,
       <ContactList />
-    </main>
+      ) : 
+      (<div>Please Login or register</div>)}
+    </Main>
   );
 }
 
+      {/* <Main>
+        <title>Your Contacts</title>
+      </Main>       */}

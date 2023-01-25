@@ -76,7 +76,7 @@ export const ContactForm = () => {
     //   </button>
     // </form>
     <PhonebookForm onSubmit={handleFormSubmit} >
-    <FormTitle>Phonebook</FormTitle>
+    <FormTitle>Create new contact</FormTitle>
         <FormLabel htmlFor={nameInputId} >
             Name {''}
         </FormLabel>                
