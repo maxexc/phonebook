@@ -6,6 +6,7 @@ import { fetchContacts } from 'redux/contacts/operations';
 import { selectLoading } from 'redux/contacts/selectors';
 
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import ContactForm from 'components/ContactAddForm/ContactAddForm';
 // import { ContactForm } from 'components/ContactAddForm/ContactAddForm';
 
 export default function Contacts() {
@@ -26,7 +27,7 @@ export default function Contacts() {
                  Your Contacts 
         </h2>
         <Filter />
-        {/* <ContactForm /> */}
+        <ContactForm />
       <div>{isLoading && 'Request in progress...'}</div>
       <ContactList />
     </main>
