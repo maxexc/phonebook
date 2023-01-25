@@ -17,9 +17,9 @@ export default function Contacts() {
 
   return (
     <>
-      <main>
+      {/* <main>
         <title>Your Contacts</title>
-      </main>      
+      </main>       */}
         <h2> 
             <AccountBoxIcon fontSize="large" sx={{ mr: 1 }} />
                  Your Contacts 
