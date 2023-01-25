@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Layout } from 'components/Layout/Layout';
 import { Route, Routes } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { refreshUser } from 'redux/auth/operations';
+import { useAuth } from 'hooks';
 
 
 import Home from 'pages/Home';
@@ -11,7 +14,17 @@ import Contacts from 'pages/Contacts';
 
 
 const App = () => {
+  const dispatch = useDispatch();
+  const { isRefreshing } = useAuth();
+
+  useEffect(() => {
+    dispatch(refreshUser())
+  }, [dispatch])
+
   return (
+    isRefreshing ? (
+      'Fetching user data...'
+    ) : (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home/>}/>
@@ -20,7 +33,7 @@ const App = () => {
         <Route path='/contacts' element={<Contacts />} />        
       </Route>
     </Routes>
-  );
+  ));
 };
 
 export default App;

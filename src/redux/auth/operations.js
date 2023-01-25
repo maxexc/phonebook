@@ -72,7 +72,24 @@ export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
  */
 export const refreshUser = createAsyncThunk(
   'auth/refresh',
-  async (_, thunkAPI) => {}
+  async (_, thunkAPI) => {
+    const {token} = thunkAPI.getState().auth;
+    console.log(token);
+
+    if (!token) {
+      return;
+    }
+    console.log("Refreshing user");
+
+    setAuthHeader(token);
+    try {
+      const res = await axios.get('/users/current', )
+      return res.data;
+
+    } catch (err){
+      return thunkAPI.rejectWithValue(err.message);
+    }
+  }
   
   // {
   //   // Reading the token from the state via getState()

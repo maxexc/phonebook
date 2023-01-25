@@ -1,4 +1,4 @@
-import { useAuth } from 'Hooks';
+import { useAuth } from 'hooks';
 import React from 'react';
 // import { NavLink } from 'react-router-dom';
 import { MenuLink } from './Navigation.styled';
