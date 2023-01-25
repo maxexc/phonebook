@@ -1,69 +1,66 @@
-import { useState } from 'react';
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { logIn } from 'redux/auth/operations';
+import { Form, Label } from './LoginForm.styled';
+// import { useState } from 'react';
 // import authOperations from 'redux/auth/operations';
 // import { authOperations } from '../redux/auth';
 
-const styles = {
-  form: {
-    width: 320,
-  },
-  label: {
-    display: 'flex',
-    flexDirection: 'column',
-    marginBottom: 15,
-  },
-};
 
 export default function LoginForm() {
-  // const dispatch = useDispatch();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const dispatch = useDispatch();
+//   const [email, setEmail] = useState('');
+//   const [password, setPassword] = useState('');
 
-  const handleChange = ({ target: { name, value } }) => {
-    switch (name) {
-      case 'email':
-        return setEmail(value);
-      case 'password':
-        return setPassword(value);
-      default:
-        return;
-    }
-  };
+//   const handleChange = ({ target: { name, value } }) => {
+//     switch (name) {
+//       case 'email':
+//         return setEmail(value);
+//       case 'password':
+//         return setPassword(value);
+//       default:
+//         return;
+//     }
+//   };
 
   const handleSubmit = e => {
     e.preventDefault();
-    // dispatch(authOperations.logIn({ email, password }));
-    setEmail('');
-    setPassword('');
+    const form = e.currentTarget;
+    dispatch(logIn({ 
+        email: form.elements.email.value, 
+        password: form.elements.password.value, 
+    }));
+    // setEmail('');
+    // setPassword('');
+    form.reset();
   };
 
   return (
     <div>
       {/* <h1>Log in</h1> */}
 
-      <form onSubmit={handleSubmit} style={styles.form} autoComplete="off">
-        <label style={styles.label}>
+      <Form onSubmit={handleSubmit}  autoComplete="off">
+        <Label >
           E-mail
           <input
             type="email"
             name="email"
-            value={email}
-            onChange={handleChange}
+            // value={email}
+            // onChange={handleChange}
           />
-        </label>
+        </Label>
 
-        <label style={styles.label}>
+        <Label >
           Password
           <input
             type="password"
             name="password"
-            value={password}
-            onChange={handleChange}
+            // value={password}
+            // onChange={handleChange}
           />
-        </label>
+        </Label>
 
         <button type="submit">Submit</button>
-      </form>
+      </Form>
     </div>
   );
 }
