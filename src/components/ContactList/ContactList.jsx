@@ -3,11 +3,11 @@ import { useSelector } from 'react-redux';
 import { Contact } from 'components/Contact/Contact';
 // import css from './TaskList.module.css';
 import { List } from './ContactList.styled';
-import { selectAllСontacts } from 'redux/contacts/selectors';
+import { selectСontacts } from 'redux/contacts/selectors';
 
 
 export const ContactList = () => {
-  const contacts = useSelector(selectAllСontacts);
+  const contacts = useSelector(selectСontacts);
 
   return (
     <List >

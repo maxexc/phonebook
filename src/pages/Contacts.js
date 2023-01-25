@@ -6,6 +6,7 @@ import { fetchContacts } from 'redux/contacts/operations';
 import { selectLoading } from 'redux/contacts/selectors';
 
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
+// import { ContactForm } from 'components/ContactAddForm/ContactAddForm';
 
 export default function Contacts() {
   const dispatch = useDispatch();
@@ -16,18 +17,19 @@ export default function Contacts() {
   }, [dispatch]);
 
   return (
-    <>
-      {/* <main>
+    <main>
+      <main>
         <title>Your Contacts</title>
-      </main>       */}
+      </main>      
         <h2> 
             <AccountBoxIcon fontSize="large" sx={{ mr: 1 }} />
                  Your Contacts 
         </h2>
         <Filter />
+        {/* <ContactForm /> */}
       <div>{isLoading && 'Request in progress...'}</div>
       <ContactList />
-    </>
+    </main>
   );
 }
 
