@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { nanoid } from 'nanoid';
 import { useDispatch } from 'react-redux';
-// import { addContact } from "redux/operations";
-// import { addTask } from 'redux/tasks/operations';
-// import css from './TaskEditor.module.css';
+import { addContact } from 'redux/contacts/operations';
 import {
     FormTitle,
     PhonebookForm,
@@ -11,7 +9,7 @@ import {
     FormInput,
     FormBtn,
 } from './ContactAddForm.styled'
-import { addContact } from 'redux/contacts/operations';
+
 
 
 export const ContactForm = () => {   
@@ -40,12 +38,11 @@ export const ContactForm = () => {
             number,
             id: nanoid(),
         };
-        // onsubmit({
-        //     name: name,
-        //     number: number,
-        //     id: nanoid(),
-        // });
-        // console.log(onSubmit)
+
+        // toaster
+        // toaster
+        // toaster
+
         dispatch(addContact(newContact));
 
         setName('');
@@ -55,26 +52,8 @@ export const ContactForm = () => {
     const nameInputId = nanoid();
     const numberInputId = nanoid();
 
-    
-//   const handleFormSubmit = e => {
-//     e.preventDefault();
-//     const form = e.currentTarget;
-//     const text = form.elements.text.value;
-//     if (text !== '') {
-//       dispatch(addTask(text));
-//       form.reset();
-//       return;
-//     }
-//     alert('Task cannot be empty. Enter some text!');
-//   };
 
   return (
-    // <form className={css.form} onSubmit={handleSubmit}>
-    //   <input name="text" className={css.input} />
-    //   <button type="submit" className={css.button}>
-    //     Add task
-    //   </button>
-    // </form>
     <PhonebookForm onSubmit={handleFormSubmit} >
     <FormTitle>Create new contact</FormTitle>
         <FormLabel htmlFor={nameInputId} >
