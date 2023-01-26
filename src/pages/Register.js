@@ -11,5 +11,3 @@ const Register = () => {
 };
 
 export default Register;
-
-//  <title>Create new account</title> 

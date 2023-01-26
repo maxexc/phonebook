@@ -11,7 +11,6 @@ import {
 } from './ContactAddForm.styled'
 
 
-
 export const ContactForm = () => {   
     const [name, setName] = useState('');
     const [number, setNumber] = useState('');

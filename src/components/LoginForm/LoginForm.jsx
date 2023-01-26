@@ -29,14 +29,14 @@ export default function LoginForm() {
         email: form.elements.email.value, 
         password: form.elements.password.value, 
     }));
+    
+    form.reset();
     // setEmail('');
     // setPassword('');
-    form.reset();
   };
 
   return (
     <div>
-      {/* <h1>Log in</h1> */}
 
       <Form onSubmit={handleSubmit}  autoComplete="off">
         <Label >

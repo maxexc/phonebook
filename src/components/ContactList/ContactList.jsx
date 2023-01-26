@@ -1,7 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-// import { Task } from '../Task/Task';
 import { Contact } from 'components/Contact/Contact';
-// import css from './TaskList.module.css';
 import { List } from './ContactList.styled';
 import { selectFilter, selectСontacts } from 'redux/contacts/selectors';
 import { useEffect } from 'react';
