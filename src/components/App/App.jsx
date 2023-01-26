@@ -4,7 +4,8 @@ import { Route, Routes } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 // import { useDispatch, useSelector } from 'react-redux';
 import { refreshUser } from 'redux/auth/operations';
-import { useAuth } from 'Hooks/useAuth';
+// import { useAuth } from 'Hooks/useAuth';
+import { useAuth } from 'Hooks';
 
 import Home from 'pages/Home';
 import Login from 'pages/Login';
