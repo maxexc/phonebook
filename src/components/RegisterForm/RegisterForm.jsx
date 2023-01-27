@@ -77,7 +77,7 @@ export const RegisterForm = () => {
           name="password"
           id={password}
           // pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-          title="Password must be at least 7 characters long"
+          title="Your Password must include a minimum of 7 characters"
           placeholder="password"
           required
           value={password}
