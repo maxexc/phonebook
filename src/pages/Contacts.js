@@ -8,11 +8,13 @@ import ContactForm from 'components/ContactAddForm/ContactAddForm';
 import { Main } from './Title.styled';
 
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import Loader from 'components/Loader/Loader';
 
 
 export default function Contacts() {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectLoading);
+  // console.log(isLoading);
 
   useEffect(() => {
     dispatch(fetchContacts());
@@ -20,6 +22,7 @@ export default function Contacts() {
 
   return (
     <Main>
+      {isLoading && <Loader />}
       {/* {isLoggedIn ? ( ) :  (<div>Please Login or register</div>) } */}
         <h2> 
             <AccountBoxIcon fontSize="large" sx={{ mr: 1 }} />
@@ -27,7 +30,7 @@ export default function Contacts() {
         </h2>
         <Filter />
         <ContactForm />
-      <div>{isLoading && 'Request in progress...'}</div>
+      {/* <div>{isLoading && 'Request in progress...'}</div> */}
       <ContactList />      
       
     </Main>
