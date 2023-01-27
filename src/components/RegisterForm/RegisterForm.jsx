@@ -74,7 +74,7 @@ export const RegisterForm = () => {
         <input
           type="password"
           name="password"
-          id={password}
+          id="passwordInputId"
           title="Your Password must include a minimum of 7 characters"
           placeholder="password"
           required
