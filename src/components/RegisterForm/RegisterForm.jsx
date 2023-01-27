@@ -47,7 +47,7 @@ export const RegisterForm = () => {
         <input 
           type="text"
           name="name"
-          // id={name}
+          id={name}
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           placeholder="Emmy Richards"
@@ -61,7 +61,7 @@ export const RegisterForm = () => {
         <input 
           type="email"
           name="email"
-          // id={email}
+          id={email}
           title="Email must contain at list '@'. For example user@mail.com"
           placeholder="user@mail.com"
           required
@@ -74,7 +74,7 @@ export const RegisterForm = () => {
         <input
           type="password"
           name="password"
-          // id={password}
+          id={123`password`}
           title="Your Password must include a minimum of 7 characters"
           placeholder="password"
           required
