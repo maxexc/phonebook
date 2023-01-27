@@ -1,5 +1,4 @@
 import { useAuth } from 'Hooks';
-import React from 'react';
 import { MenuLink } from './Navigation.styled';
 
 
