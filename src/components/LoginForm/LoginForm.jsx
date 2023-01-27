@@ -27,7 +27,7 @@ export default function LoginForm() {
     const form = e.currentTarget;
     dispatch(logIn({ 
         email: form.elements.email.value.trim(), 
-        password: form.elements.password.value.trim(), 
+        password: form.elements.password.value, 
     }));
     
     form.reset();
