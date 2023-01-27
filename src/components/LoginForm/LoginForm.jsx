@@ -11,16 +11,31 @@ export default function LoginForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleChange = ({ target: { name, value } }) => {
-    switch (name) {
-      case 'email':
-        return setEmail(value);
-      case 'password':
-        return setPassword(value);
+  const handleChange = event => {
+    switch (event.currentTarget.name) {
+      case 'email': setEmail(event.currentTarget.value);
+        break;
+  
+      case 'password': setPassword(event.currentTarget.value);
+        break;
+  
       default:
         return;
-    }
-  };
+    };
+  }
+
+  //   ---  or ---
+  // const handleChange = ({ target: { name, value } }) => {
+  //   switch (name) {
+  //     case 'email':
+  //       return setEmail(value);
+  //     case 'password':
+  //       return setPassword(value);
+  //     default:
+  //       return;
+  //   }
+  // };
+
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -31,6 +46,7 @@ export default function LoginForm() {
     }));
     
     form.reset();
+    // --- either  ---
     // setEmail('');
     // setPassword('');
   };

@@ -23,7 +23,7 @@ export const RegisterForm = () => {
       default:
         return;
     };
-    console.log(name, email, password);
+    // console.log(name, email, password);
 }
       
 
