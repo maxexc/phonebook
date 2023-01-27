@@ -20,18 +20,20 @@ const App = () => {
   }, [dispatch])
 
   return (
-    isRefreshing ? (
-      'Fetching user data...'
-    ) : (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home/>}/>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path='/contacts' element={<Contacts />} />        
-      </Route>
-    </Routes>
-  ));
+    <>
+      {isRefreshing ? (
+        'Fetching user data...'
+      ) : (
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home/>}/>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path='/contacts' element={<Contacts />} />        
+        </Route>
+      </Routes>
+      )}
+    </>);
 };
 
 export default App;

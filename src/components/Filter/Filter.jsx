@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { filterContacts } from 'redux/contacts/filterSlice';
 import { selectFilter } from 'redux/contacts/selectors';
@@ -32,7 +32,7 @@ export const Filter = () => {
 
 export default Filter;
 
-Filter.propTypes = {
-    value: PropTypes.string.isRequired,
-    onFilter: PropTypes.func.isRequired,
-}
+// Filter.propTypes = {
+//     value: PropTypes.string.isRequired,
+//     onFilter: PropTypes.func.isRequired,
+// }

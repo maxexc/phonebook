@@ -73,16 +73,21 @@ export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
 export const refreshUser = createAsyncThunk(
   'auth/refresh',
   async (_, thunkAPI) => {
-    const {token} = thunkAPI.getState().auth;
+    // const {token} = thunkAPI.getState().auth;
+    const state = thunkAPI.getState();
+    const persistedToken = state.auth.token;
     // const state = thunkAPI.getState().auth;
-    console.log(token);
+    console.log(persistedToken);
 
-    if (!token) {
+    if (persistedToken === null) {
       return thunkAPI.rejectWithValue('No valid token');
+    } else {
+      console.log("Refreshing user");
+      setAuthHeader(persistedToken);
+      // token.set(persistedToken);
     }
-    console.log("Refreshing user");
 
-    setAuthHeader(token);
+    
     try {      
       const res = await axios.get('/users/current')
       return res.data;
