@@ -15,6 +15,8 @@ import MailIcon from '@mui/icons-material/Mail';
 import KeyIcon from '@mui/icons-material/Key';
 import VisibilityOffSharp from '@mui/icons-material/VisibilityOffSharp';
 import VisibilitySharp from '@mui/icons-material/VisibilitySharp';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 export default function LoginForm() {
@@ -57,6 +59,19 @@ export default function LoginForm() {
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
+    if (form.elements.email.value.trim() === "") {
+      // toast.success('Password must contain at least 7 characters',
+      // {duration: 1500, icon: '💡', style: {borderRadius: '20px', color: '#fd6017',} }, );
+      toast.info('Sorry, E-mail field cannot be empty');
+      return;
+    }
+    if (form.elements.password.value.length < 6) {
+      // toast.success('Password must contain at least 7 characters',
+      // {duration: 1500, icon: '💡', style: {borderRadius: '20px', color: '#fd6017',} }, );
+      toast.warn('Password must contain at least 7 characters');
+      return;
+    }
+    
     dispatch(logIn({ 
         email: form.elements.email.value.trim(), 
         password: form.elements.password.value, 
@@ -123,7 +138,7 @@ export default function LoginForm() {
             Log in
           </Button>
         </form>
-        {/* <ToastContainer /> */}
+        <ToastContainer position="top-center" autoClose={1500}/>
       </Box>
     </Container>
   );
