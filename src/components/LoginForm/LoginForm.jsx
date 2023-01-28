@@ -60,14 +60,10 @@ export default function LoginForm() {
     e.preventDefault();
     const form = e.currentTarget;
     if (form.elements.email.value.trim() === "") {
-      // toast.success('Password must contain at least 7 characters',
-      // {duration: 1500, icon: '💡', style: {borderRadius: '20px', color: '#fd6017',} }, );
       toast.info('Sorry, E-mail field cannot be empty');
       return;
     }
     if (form.elements.password.value.length < 6) {
-      // toast.success('Password must contain at least 7 characters',
-      // {duration: 1500, icon: '💡', style: {borderRadius: '20px', color: '#fd6017',} }, );
       toast.warn('Password must contain at least 7 characters');
       return;
     }
@@ -90,7 +86,6 @@ export default function LoginForm() {
         display: 'flex', 
         justifyContent: 'center',
         alignContent: 'center',
-        // bgcolor: 'tomato',
       }}>
       <Box sx={{ width: '420px', textAlign: 'center', px: '10px', border: '2px solid #0f7ec9', bgcolor: '#fff', height: '200px', borderRadius: '20px', pt: '10px' }}>      
         <form onSubmit={handleSubmit}>
