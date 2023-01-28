@@ -65,17 +65,16 @@ export const ContactForm = () => {
           name="name"
           value={name}
           required
-          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           size="small"
           margin="normal"          
           fullWidth
           id="name"
           label="Name"
-          // inputProps={{
-          //   pattern:
-          //     "^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$",
-          // }}
+          inputProps={{
+            pattern:
+              "^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$",
+          }}
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
@@ -86,15 +85,16 @@ export const ContactForm = () => {
         />
         <TextField
           onChange={handleInputChange}
+          type="tel"
+          name="number"
           value={number}
+          required
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           size="small"
-          margin="normal"
-          required
+          margin="normal"          
           fullWidth
           id="number"
           label="Number"
-          name="number"
           inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
           InputProps={{
             startAdornment: (
@@ -106,13 +106,12 @@ export const ContactForm = () => {
         />
         <Button
           type="submit"
-          fullWidth
+          // fullWidth
           variant="contained"
           sx={{ mt: 1, mb: 4 }}
         >
           Add contact
-        </Button>
-          
+        </Button>        
     
     
       
