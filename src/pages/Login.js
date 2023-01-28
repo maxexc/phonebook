@@ -1,7 +1,7 @@
 import { Container } from '@mui/material';
 import LoginForm from 'components/LoginForm/LoginForm';
 import TsparticlesLayout from 'components/TsparticlesLayout/TsparticlesLayout';
-import { Title } from './Title.styled';
+import { TitleLogin } from './Title.styled';
 
 export const Login = () => {
   return (
@@ -18,7 +18,7 @@ export const Login = () => {
         maxWidth="xl"
       >      
         <TsparticlesLayout />
-        <Title>Log in</Title>
+        <TitleLogin>Log in</TitleLogin>
         <LoginForm />
       </Container>
   );

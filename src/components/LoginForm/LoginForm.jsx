@@ -82,15 +82,14 @@ export default function LoginForm() {
   return (
     <Container 
       sx={{ 
-        height: '100vh',
         display: 'flex', 
         justifyContent: 'center',
         alignContent: 'center',
       }}>
       <Box sx={{ width: '420px', textAlign: 'center', px: '10px', border: '2px solid #0f7ec9', bgcolor: '#fff', height: '200px', borderRadius: '20px', pt: '10px' }}>      
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} autoComplete="off">
         <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
-        <MailIcon sx={{ color: '#0f7ec9', mr: 1, mb: 1, }} />
+          <MailIcon sx={{ color: '#0f7ec9', mr: 1, mb: 1, }} />
           <TextField
             onChange={handleChange}          
             label="Email"
@@ -99,20 +98,23 @@ export default function LoginForm() {
             required
             variant="standard"
             id="standard-basic"
+            title="Email must contain at list '@'. For example user@mail.com"
             sx={{ m: 1, width: '100%'  }}
           />
-          </Box>
+        </Box>
 
-          <Box sx={{ display: 'flex', alignItems: 'flex-end', mb: '10px' }}>
-            <KeyIcon sx={{ color: '#0f7ec9', mr: 1, mb: 1, }} />
+        <Box sx={{ display: 'flex', alignItems: 'flex-end', mb: '10px' }}>
+          <KeyIcon sx={{ color: '#0f7ec9', mr: 1, mb: 1, }} />
           <FormControl sx={{ m: 1, width: '100%' }} variant="standard">        
             <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
             <Input
-              name="password"
-              value={password}
               onChange={handleChange}
+              label="Password"
+              name="password"
+              value={password}                
               required
               id="standard-adornment-password"
+              title="Your Password must include a minimum of 7 characters"
               type={showPassword ? 'text' : 'password'}
               endAdornment={
                 <InputAdornment position="end">
@@ -126,8 +128,8 @@ export default function LoginForm() {
                 </InputAdornment>
               }
             />          
-            </FormControl>
-            </Box>        
+          </FormControl>
+        </Box>        
 
           <Button variant="contained" type="submit">
             Log in
