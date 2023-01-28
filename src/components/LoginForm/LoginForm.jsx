@@ -34,6 +34,7 @@ export default function LoginForm() {
   };
 
   const handleChange = event => {
+    // let value=email
     switch (event.currentTarget.name) {
       case 'email': setEmail(event.currentTarget.value);
         break;
@@ -78,13 +79,13 @@ export default function LoginForm() {
       
       {/* <h1>Log In</h1> */}
       <form onSubmit={handleSubmit}>
-      <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
-      <MailIcon sx={{ color: '#0d90e7', mr: 1, mb: 1, }} />
-        {/* <TextField id="input-with-sx" label="Email" variant="standard" /> */}
+      <Box sx={{ display: 'flex', alignItems: 'flex-end', ":hover": {color: "darkblue"} }}>
+      <MailIcon sx={{ color: '#0f7ec9', mr: 1, mb: 1, }} />
         <TextField
-          onChange={handleChange}
+          onChange={handleChange}          
           label="Email"
           name="email"
+          value={email}
           variant="standard"
           id="standard-basic"
           sx={{ m: 1, width: '100%' }}
@@ -103,6 +104,7 @@ export default function LoginForm() {
           </InputLabel>
           <OutlinedInput
             name="password"
+            value={password}
             onChange={handleChange}
             id="outlined-adornment-password"
             type={showPassword ? 'text' : 'password'}
