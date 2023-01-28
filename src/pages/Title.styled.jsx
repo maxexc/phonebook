@@ -10,6 +10,7 @@ export const Title = styled.h1`
   padding-bottom: 5px;
   border-radius: 10px;
   background-color: #fff;
+  /* color:  #065b94; */
 `;
 
 export const TitleLogin = styled.h1`
@@ -21,6 +22,8 @@ export const TitleLogin = styled.h1`
   padding-bottom: 5px;
   border-radius: 10px;
   background-color: #fff;
+  /* box-shadow: ; */
+  /* color: #0f7ec9; */
 `;
 
 export const Main = styled.main`

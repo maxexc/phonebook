@@ -17,6 +17,8 @@ import VisibilityOffSharp from '@mui/icons-material/VisibilityOffSharp';
 import VisibilitySharp from '@mui/icons-material/VisibilitySharp';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { BottomText, StyledLink } from './LoginForm.styled';
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 
 
 export default function LoginForm() {
@@ -86,7 +88,8 @@ export default function LoginForm() {
         justifyContent: 'center',
         alignContent: 'center',
       }}>
-      <Box sx={{ width: '420px', textAlign: 'center', px: '10px', border: '2px solid #0f7ec9', bgcolor: '#fff', height: '200px', borderRadius: '20px', pt: '10px' }}>      
+      <Box sx={{ width: '420px', textAlign: 'center', p: '10px', border: '2px solid #0f7ec9', bgcolor: '#fff', borderRadius: '20px' }}>      
+        <AutoStoriesIcon sx={{ fontSize: 80, mb: 3, color: '#0f7ec9' }} />
         <form onSubmit={handleSubmit} autoComplete="off">
         <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
           <MailIcon sx={{ color: '#0f7ec9', mr: 1, mb: 1, }} />
@@ -103,7 +106,7 @@ export default function LoginForm() {
           />
         </Box>
 
-        <Box sx={{ display: 'flex', alignItems: 'flex-end', mb: '10px' }}>
+        <Box sx={{ display: 'flex', alignItems: 'flex-end', mb: '30px' }}>
           <KeyIcon sx={{ color: '#0f7ec9', mr: 1, mb: 1, }} />
           <FormControl sx={{ m: 1, width: '100%' }} variant="standard">        
             <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
@@ -135,6 +138,10 @@ export default function LoginForm() {
             Log in
           </Button>
         </form>
+        <BottomText>
+            Don’t have an account yet?{' '}
+            <StyledLink to="/register">Sign up</StyledLink>
+        </BottomText>
         <ToastContainer position="top-center" autoClose={1500}/>
       </Box>
     </Container>

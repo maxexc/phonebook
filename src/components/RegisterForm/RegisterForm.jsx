@@ -1,10 +1,12 @@
 import { AccountCircle, VisibilityOffSharp, VisibilitySharp } from '@mui/icons-material';
 import KeyIcon from '@mui/icons-material/Key';
 import MailIcon from '@mui/icons-material/Mail';
-import { Box, Button, Container, FormControl, IconButton, Input, InputAdornment, InputLabel, OutlinedInput, TextField } from '@mui/material';
+import { Box, Button, Container, FormControl, IconButton, Input, InputAdornment, InputLabel, TextField } from '@mui/material';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import { BottomText, StyledLink } from './RegisterForm.styled';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -56,7 +58,8 @@ export const RegisterForm = () => {
         justifyContent: 'center',
         alignContent: 'center',
       }}>
-      <Box sx={{ width: '420px', textAlign: 'center', px: '10px', border: '2px solid #0f7ec9', bgcolor: '#fff', height: '274px', borderRadius: '20px', pt: '10px' }}>
+      <Box sx={{ width: '420px', textAlign: 'center', p: '10px', border: '2px solid #0f7ec9', bgcolor: '#fff', borderRadius: '20px' }}>
+        <AutoStoriesIcon sx={{ fontSize: 80, mb: 3, color: '#0f7ec9' }} />
         <form onSubmit={handleSubmit} autoComplete="off">
           <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
             <AccountCircle sx={{ color: '#0f7ec9', mr: 1, mb: 1, }}/>
@@ -89,7 +92,7 @@ export const RegisterForm = () => {
             />
           </Box>
 
-          <Box sx={{ display: 'flex', alignItems: 'flex-end', mb: '10px' }}>
+          <Box sx={{ display: 'flex', alignItems: 'flex-end', mb: '30px' }}>
             <KeyIcon sx={{ color: '#0f7ec9', mr: 1, mb: 1, }} />
             <FormControl sx={{ m: 1, width: '100%' }} variant="standard">
               <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
@@ -122,6 +125,9 @@ export const RegisterForm = () => {
           </Button>
           {/* <ToastContainer /> */}
         </form> 
+        <BottomText>
+            Already have an account? <StyledLink to="/login">Log in</StyledLink>
+        </BottomText>
       </Box>  
 
 
