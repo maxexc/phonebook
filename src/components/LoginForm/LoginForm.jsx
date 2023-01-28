@@ -77,7 +77,7 @@ export default function LoginForm() {
         alignContent: 'center',
         // bgcolor: 'tomato',
       }}>
-      <Box sx={{ width: '420px', textAlign: 'center', px: '10px', bgcolor: '#c3f6ff', height: '200px', borderRadius: '20px' }}>      
+      <Box sx={{ width: '420px', textAlign: 'center', px: '10px', border: '2px solid #0f7ec9', bgcolor: '#fff', height: '200px', borderRadius: '20px' }}>      
         <form onSubmit={handleSubmit}>
         <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
         <MailIcon sx={{ color: '#0f7ec9', mr: 1, mb: 1, }} />
@@ -93,7 +93,7 @@ export default function LoginForm() {
           />
           </Box>
 
-          <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
+          <Box sx={{ display: 'flex', alignItems: 'flex-end', mb: '10px' }}>
             <KeyIcon sx={{ color: '#0f7ec9', mr: 1, mb: 1, }} />
           <FormControl sx={{ m: 1, width: '100%' }} variant="standard">        
             <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
