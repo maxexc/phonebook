@@ -77,7 +77,7 @@ export default function LoginForm() {
         alignContent: 'center',
         // bgcolor: 'tomato',
       }}>
-      <Box sx={{ width: '420px', textAlign: 'center' }}>      
+      <Box sx={{ width: '420px', textAlign: 'center', bgcolor: '#e8ffc3', height: '200px', borderRadius: '20px' }}>      
         <form onSubmit={handleSubmit}>
         <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
         <MailIcon sx={{ color: '#0f7ec9', mr: 1, mb: 1, }} />

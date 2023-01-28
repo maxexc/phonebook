@@ -5,6 +5,7 @@ export const Title = styled.h1`
   font-size: 24px;
   text-align: center;
   margin-bottom: 20px;
+  background-color: #fff;
 `;
 
 export const Main = styled.main`
