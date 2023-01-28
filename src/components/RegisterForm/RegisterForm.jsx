@@ -5,7 +5,8 @@ import { Box, Button, Container, FormControl, IconButton, Input, InputAdornment,
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
-import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+// import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
 import { BottomText, StyledLink } from './RegisterForm.styled';
 
 export const RegisterForm = () => {
@@ -59,7 +60,7 @@ export const RegisterForm = () => {
         alignContent: 'center',
       }}>
       <Box sx={{ width: '420px', textAlign: 'center', p: '10px', border: '2px solid #0f7ec9', bgcolor: '#fff', borderRadius: '20px' }}>
-        <AutoStoriesIcon sx={{ fontSize: 80, mb: 3, color: '#0f7ec9' }} />
+        <MenuBookIcon sx={{ fontSize: 80, mb: 3, color: '#0f7ec9' }} />
         <form onSubmit={handleSubmit} autoComplete="off">
           <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
             <AccountCircle sx={{ color: '#0f7ec9', mr: 1, mb: 1, }}/>
