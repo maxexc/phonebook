@@ -28,8 +28,9 @@ export default function Contacts() {
             <AccountBoxIcon fontSize="large" sx={{ mr: 1 }} />
                  Your Contacts 
         </h2>
-        <Filter />
-        <ContactForm />
+        
+      <ContactForm />
+      <Filter />
       {/* <div>{isLoading && 'Request in progress...'}</div> */}
       <ContactList />      
       

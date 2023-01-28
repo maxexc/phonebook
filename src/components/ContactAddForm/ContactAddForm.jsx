@@ -9,6 +9,9 @@ import {
     FormInput,
     FormBtn,
 } from './ContactAddForm.styled'
+import { Box, Button, InputAdornment, TextField } from '@mui/material';
+import { AccountCircle, PhoneIphone } from '@mui/icons-material';
+import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 
 
 
@@ -54,6 +57,70 @@ export const ContactForm = () => {
 
 
   return (
+    <Box
+        component="form"
+        autoComplete="off"
+        maxWidth="600px"
+        sx={{ margin: '0 auto' }}
+        onSubmit={handleFormSubmit}
+      >
+        <title>Create new contact</title>
+        <TextField
+          onChange={handleInputChange}
+          value={name}
+          type="text"
+          title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+          size="small"
+          margin="normal"
+          required
+          fullWidth
+          id="name"
+          label="Name"
+          name="name"
+          inputProps={{
+            pattern:
+              "^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$",
+          }}
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <AccountCircle />
+              </InputAdornment>
+            ),
+          }}
+        />
+        <TextField
+          onChange={handleInputChange}
+          value={number}
+          title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+          size="small"
+          margin="normal"
+          required
+          fullWidth
+          id="number"
+          label="Number"
+          name="number"
+          inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <PhoneIphoneIcon />
+              </InputAdornment>
+            ),
+          }}
+        />
+        <Button
+          type="submit"
+          fullWidth
+          variant="contained"
+          sx={{ mt: 1, mb: 4 }}
+        >
+          Add contact
+        </Button>
+          
+    
+    
+      
     <PhonebookForm onSubmit={handleFormSubmit} >
     <FormTitle>Create new contact</FormTitle>
         <FormLabel htmlFor={nameInputId} >
@@ -85,8 +152,9 @@ export const ContactForm = () => {
             value={number}
             onChange={handleInputChange}
         />                        
-    <FormBtn type="submit">Add contact</FormBtn>
-    </PhonebookForm>
+        <FormBtn type="submit">Add contact</FormBtn>
+        </PhonebookForm>
+    </Box>
   );
 };
 
