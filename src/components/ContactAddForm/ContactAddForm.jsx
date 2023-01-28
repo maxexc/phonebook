@@ -2,15 +2,9 @@ import React, { useState } from 'react';
 import { nanoid } from 'nanoid';
 import { useDispatch } from 'react-redux';
 import { addContact } from 'redux/contacts/operations';
-import {
-    FormTitle,
-    PhonebookForm,
-    FormLabel,
-    FormInput,
-    FormBtn,
-} from './ContactAddForm.styled'
+import { Title } from './ContactAddForm.styled'
 import { Box, Button, InputAdornment, TextField } from '@mui/material';
-import { AccountCircle, PhoneIphone } from '@mui/icons-material';
+import { PersonAddAlt1 } from '@mui/icons-material';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 
 
@@ -52,39 +46,40 @@ export const ContactForm = () => {
         setNumber('');
     }
 
-    const nameInputId = nanoid();
-    const numberInputId = nanoid();
+    // const nameInputId = nanoid();
+    // const numberInputId = nanoid();
 
 
   return (
     <Box
         component="form"
         autoComplete="off"
-        maxWidth="600px"
+        maxWidth="420px"
         sx={{ margin: '0 auto' }}
         onSubmit={handleFormSubmit}
       >
-        <title>Create new contact</title>
+        <Title >Add new contact</Title>
         <TextField
           onChange={handleInputChange}
-          value={name}
           type="text"
+          name="name"
+          value={name}
+          required
+          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           size="small"
-          margin="normal"
-          required
+          margin="normal"          
           fullWidth
           id="name"
           label="Name"
-          name="name"
-          inputProps={{
-            pattern:
-              "^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$",
-          }}
+          // inputProps={{
+          //   pattern:
+          //     "^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$",
+          // }}
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
-                <AccountCircle />
+                <PersonAddAlt1 sx={{ color: '#0f7ec9' }} />
               </InputAdornment>
             ),
           }}
@@ -104,7 +99,7 @@ export const ContactForm = () => {
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
-                <PhoneIphoneIcon />
+                <PhoneIphoneIcon sx={{ color: '#0f7ec9' }} />
               </InputAdornment>
             ),
           }}
@@ -121,7 +116,7 @@ export const ContactForm = () => {
     
     
       
-    <PhonebookForm onSubmit={handleFormSubmit} >
+    {/* <PhonebookForm onSubmit={handleFormSubmit} >
     <FormTitle>Create new contact</FormTitle>
         <FormLabel htmlFor={nameInputId} >
             Name {''}
@@ -153,7 +148,7 @@ export const ContactForm = () => {
             onChange={handleInputChange}
         />                        
         <FormBtn type="submit">Add contact</FormBtn>
-        </PhonebookForm>
+        </PhonebookForm> */}
     </Box>
   );
 };

@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+export const Title = styled.h2`
+  font-family: 'Handlee', cursive;
+  text-align: center;
+`
+
 export const FormTitle = styled.h1`
     font-size: 35px;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
