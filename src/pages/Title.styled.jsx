@@ -28,10 +28,10 @@ export const TitleLogin = styled.h1`
 
 export const Main = styled.main`
 
-height: 100vh;
+/* height: 100vh; */
 display: flex;
 flex-direction: column;
-/* justify-content: center; */
+justify-content: center;
 align-items: center;
   margin: 0 auto;
   padding-top: 22px;
