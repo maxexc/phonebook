@@ -5,7 +5,7 @@ import { AuthNav } from "components/AuthNav/AuthNav";
 import Navigation from "components/Navigation/Navigation";
 import { UserMenu } from "components/UserMenu/UserMenu";
 import { useAuth } from "Hooks";
-import { Header } from "./AppBar.styled";
+// import { Header } from "./AppBar.styled";
 
 
 export const AppNavBar = () => {
@@ -16,7 +16,7 @@ export const AppNavBar = () => {
   return (
     <AppBar position="static" sx={{  color: ""}}>
       <Container >
-        <Header >
+        {/* <Header > */}
         <Toolbar>
          <Typography
             variant="h5"
@@ -27,25 +27,25 @@ export const AppNavBar = () => {
               mr: 5,
               display: { xs: 'none', md: 'flex' },
               flexGrow: 1,
-              fontFamily: 'monospace',
+              fontFamily: 'revert-layer',
               fontWeight: 500,
               color: 'inherit',
               textDecoration: 'none',
             }}
-          ><AutoStoriesIcon />
-        Phonebook
-        </Typography>
-        <Box sx={{ flexGrow: 24,
-        fontWeight: 700,
-        textDecoration: 'none'
-         }}>
-            
-              
-              <Navigation />
-              </Box>
+          ><AutoStoriesIcon sx={{ color: '#fff', pr: 1, mt: 0.5 }}/>
+          Phonebook
+          </Typography>
+
+          <Box sx={{ flexGrow: 24,
+          fontWeight: 700,
+          textDecoration: 'none'
+          }}>   
+            <Navigation />
+          </Box>
+
             {isLoggedIn ? <UserMenu /> : <AuthNav />}
             </Toolbar>
-        </Header>
+        {/* </Header> */}
       </Container>
     </AppBar>
     );
