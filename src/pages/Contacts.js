@@ -8,6 +8,7 @@ import ContactForm from 'components/ContactAddForm/ContactAddForm';
 import { Main } from './Title.styled';
 
 import Loader from 'components/Loader/Loader';
+import { Container } from '@mui/system';
 
 
 export default function Contacts() {
@@ -21,6 +22,7 @@ export default function Contacts() {
 
   return (
     <Main>
+      <Container sx={{ display: "flex", flexDirection: "column", alignItems: "center", pt: 2, pb: 4 }} maxWidth="xl">
       {isLoading && <Loader />}
       {/* {isLoggedIn ? ( ) :  (<div>Please Login or register</div>) } */}
         {/* <h2> 
@@ -32,7 +34,7 @@ export default function Contacts() {
       <Filter />
       {/* <div>{isLoading && 'Request in progress...'}</div> */}
       <ContactList />      
-      
+      </Container>
     </Main>
   );
 }

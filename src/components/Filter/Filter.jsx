@@ -1,11 +1,11 @@
-import { Typography } from '@mui/material';
+import { TextField, Typography } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import { filterContacts } from 'redux/contacts/filterSlice';
 import { selectFilter } from 'redux/contacts/selectors';
-import {
-  FilterTitle, 
-  Filterinput, 
-} from './Filter.styled';
+// import {
+//   FilterTitle, 
+//   Filterinput, 
+// } from './Filter.styled';
 
 
 export const Filter = () => {
@@ -18,17 +18,19 @@ export const Filter = () => {
      
     return (    
         <label>
-          <Typography variant="h2" gutterBottom>
+          <Typography variant="h6" gutterBottom sx={{ width: "292px", mb: 0, mt: 1 }}>
               Filter
           </Typography >
-            <FilterTitle>Filter</FilterTitle>  
-            <Filterinput
-                type="text"
+            <TextField
+                variant="standard"
+                id="standard-search"
+                label="Enter request"
+                type="search"
                 name="filter" 
                 value={valueFilter}
-                onChange={onFilter}
-                placeholder="Enter request"
-            ></Filterinput>            
+                onChange={onFilter}                                
+                // placeholder="Enter request"
+            ></TextField>            
         </label>     
     )    
  }

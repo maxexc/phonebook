@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import image from '../images/background.jpg'
+// import image from '../images/background.jpg'
 
 export const Title = styled.h1`
   font-family: 'Handlee', cursive;
@@ -27,12 +27,12 @@ export const TitleLogin = styled.h1`
 `;
 
 export const Main = styled.main`
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   /* margin: 0 auto; */
-  padding-top: 54px;
-  background-image: url('${image}');
+  padding-top: 54px;  
 `
+/* background-image: url('${image }'); */
