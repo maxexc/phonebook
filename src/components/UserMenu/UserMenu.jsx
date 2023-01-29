@@ -1,5 +1,5 @@
 import { Logout } from "@mui/icons-material";
-import { Button, Stack } from "@mui/material";
+import { Button, Stack, Typography } from "@mui/material";
 import { useAuth } from "Hooks";
 import { useDispatch } from "react-redux";
 import { logOut } from "redux/auth/operations";
@@ -12,7 +12,12 @@ export const UserMenu = () => {
 
   return (
     <Stack direction="row" spacing={2} alignItems="center">
-      <UserName >Welcome, {user.name}</UserName>
+      <Typography
+        sx={{ fontFamily: 'cursive' }}
+      >
+        Welcome, {user.name}
+      </Typography>
+      {/* <UserName >Welcome, {user.name}</UserName> */}
       <Button
         variant="contained"
         endIcon={<Logout />}
