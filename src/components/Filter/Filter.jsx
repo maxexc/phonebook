@@ -16,7 +16,7 @@ export const Filter = () => {
      
     return (    
         <label>
-          <Typography variant="h6" gutterBottom sx={{ width: "292px", mb: 0, mt: 1 }}>
+          <Typography variant="h6" gutterBottom sx={{ width: "292px", mb: 0, mt: 1, fontFamily: 'revert' }}>
               Filter
           </Typography >
           <Item >
