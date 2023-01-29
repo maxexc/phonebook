@@ -3,7 +3,7 @@ import { Button, Stack, Typography } from "@mui/material";
 import { useAuth } from "Hooks";
 import { useDispatch } from "react-redux";
 import { logOut } from "redux/auth/operations";
-import { UserName } from "./UserMenu.styled";
+// import { UserName } from "./UserMenu.styled";
 
 
 export const UserMenu = () => {
@@ -13,7 +13,7 @@ export const UserMenu = () => {
   return (
     <Stack direction="row" spacing={2} alignItems="center">
       <Typography
-        sx={{ fontFamily: 'cursive' }}
+        sx={{ fontFamily: 'cursive', textShadow: '1px 1px 2px black' }}
       >
         Welcome, {user.name}
       </Typography>

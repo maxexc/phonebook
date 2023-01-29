@@ -28,7 +28,7 @@ export const AppNavBar = () => {
             href=""
             sx={{
               mr: 5,
-              // mb: 0.5,
+              mb: 1,
               display: { xs: 'none', md: 'flex' },
               flexGrow: 1,
               fontFamily: 'revert-layer',
