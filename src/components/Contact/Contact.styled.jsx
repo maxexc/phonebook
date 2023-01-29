@@ -42,7 +42,8 @@ export const Circle = styled.div`
 width: 30px;
 height: 30px;
 border-radius: 50%;
-background-color: rgba(136, 252, 248, 0.952);
+background-color: #83cdff;
+ /* rgba(179, 255, 252, 0.952); */
 /* #8cfcd1; */
  /* rgba(136, 252, 248, 0.952); */
 /* rgb(100, 237, 207); */
