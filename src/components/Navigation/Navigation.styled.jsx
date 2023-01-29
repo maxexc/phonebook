@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 
 export const MenuLink = styled(NavLink)`
   text-decoration: none;
-  color: black;
   font-weight: 500;
   color: white;
   text-transform: uppercase;
