@@ -20,14 +20,12 @@ export const AppNavBar = () => {
       // sx={{ backgroundColor: '#1cb6cd', flexShrink: 0 }}
     >
       <Container >
-        {/* <Header > */}
         <Toolbar>
           <Typography
             variant="h5"
             noWrap
             component={Link}
             to='/'
-            // href="/"
             sx={{
               mr: 5,
               mb: 1,
@@ -53,7 +51,6 @@ export const AppNavBar = () => {
 
             {isLoggedIn ? <UserMenu /> : <AuthNav />}
             </Toolbar>
-        {/* </Header> */}
       </Container>
     </AppBar>
     );

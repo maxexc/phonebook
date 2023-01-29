@@ -36,24 +36,21 @@ const authSlice = createSlice({
           state.token = null;
           state.isLoggedIn = false;
           toast.success('Goodbye')
-        })
+        })   
         .addCase(refreshUser.fulfilled, (state, action) => {
           state.user = action.payload;
           state.isLoggedIn = true;          
           state.isRefreshing = false;
-          toast.success('Wellcome back!')
+          // toast.success('Wellcome back!')
         })
         // .addCase(refreshUser.pending, (state, action) => {
-        //   state.isRefreshing = true;
-        // })
-        // .addCase(refreshUser.pending, (state, action) => {
-        //   state.isRefreshing = true;
-        // })
-    ,
+        //   state.isRefreshing = false;
+        // })        
   })
 
 export const authReducer = authSlice.reducer;
 
+// ---either---
 // extraReducers: {
 //   [register.fulfilled](state, action) {
 //     state.user = action.payload.user;

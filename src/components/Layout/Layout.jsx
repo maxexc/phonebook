@@ -4,7 +4,6 @@ import { Suspense } from "react"
 import { Toaster } from "react-hot-toast"
 import { Outlet } from "react-router-dom"
 // import { Container } from "./Layout.styled"
-// import { ToastContainer } from "react-toastify"
 
 
 export const Layout = () => {
@@ -14,8 +13,7 @@ export const Layout = () => {
             <Suspense fallback={<Loader />}>
                 <Outlet />
             </Suspense>
-            <Toaster position="bottom-right" reverseOrder={false} />
-            {/* <ToastContainer /> */}
+            <Toaster position="top-center" reverseOrder={false} />
         </>
     )
 }
