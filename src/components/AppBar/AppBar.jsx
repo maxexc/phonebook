@@ -5,6 +5,7 @@ import { AuthNav } from "components/AuthNav/AuthNav";
 import Navigation from "components/Navigation/Navigation";
 import { UserMenu } from "components/UserMenu/UserMenu";
 import { useAuth } from "Hooks";
+import { Link } from "react-router-dom";
 // import { Header } from "./AppBar.styled";
 
 
@@ -21,11 +22,12 @@ export const AppNavBar = () => {
       <Container >
         {/* <Header > */}
         <Toolbar>
-         <Typography
+          <Typography
             variant="h5"
             noWrap
-            component="a"
-            href=""
+            component={Link}
+            to='/'
+            // href="/"
             sx={{
               mr: 5,
               mb: 1,
@@ -36,13 +38,15 @@ export const AppNavBar = () => {
               color: 'inherit',
               textDecoration: 'none',
             }}
-          ><AutoStoriesIcon sx={{ color: '#fff', pr: 1, mt: 0.5 }}/>
-          Phonebook
+          >
+            <AutoStoriesIcon sx={{ color: '#fff', pr: 1, mt: 0.5 }}/>
+            Phonebook
           </Typography>
 
-          <Box sx={{ flexGrow: 24,
-          fontWeight: 700,
-          textDecoration: 'none'
+          <Box sx={{ 
+            flexGrow: 24,
+            fontWeight: 700,
+            textDecoration: 'none'
           }}>   
             <Navigation />
           </Box>
