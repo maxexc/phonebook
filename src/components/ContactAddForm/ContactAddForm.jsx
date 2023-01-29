@@ -1,18 +1,22 @@
 import React, { useState } from 'react';
 import { nanoid } from 'nanoid';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/contacts/operations';
 import { Title } from './ContactAddForm.styled'
 import { Box, Button, TextField } from '@mui/material';
 import { PeopleAlt, PersonAddAlt1 } from '@mui/icons-material';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
+import { selectСontacts } from 'redux/contacts/selectors';
+import { toast, ToastContainer } from 'react-toastify';
 
 
 
 export const ContactForm = () => {   
     const [name, setName] = useState('');
     const [number, setNumber] = useState('');
-    const dispatch = useDispatch();
+    const dispatch = useDispatch(); 
+    const contacts = useSelector(selectСontacts);
+    console.log(contacts);
 
     const handleInputChange = event => {
         switch (event.currentTarget.name) {
@@ -35,6 +39,13 @@ export const ContactForm = () => {
             number,
             id: nanoid(),
         };
+
+        const repeatCheck = contacts.find(item => item.name.toLowerCase() === newContact.name.toLowerCase());
+    
+    if (repeatCheck) {
+      toast.warn(`Name  ${newContact.name}  is alredy in contacts!`);
+      return;
+    }
 
         // toaster
         // toaster
@@ -116,7 +127,9 @@ export const ContactForm = () => {
             sx={{ mr: -1, mt: "18px", width: '200px' }}
           >
             Add contact
-          </Button>                       
+          </Button>  
+
+          <ToastContainer />                     
     </Box>
   );
 };

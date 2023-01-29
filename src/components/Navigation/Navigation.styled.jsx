@@ -10,6 +10,7 @@ export const MenuLink = styled(NavLink)`
   margin: 10px;
   /* text-shadow: 0.5px 0.5px 1px black; */
   :hover {
+    transition: text-shadow 250ms linear;
     text-shadow: 1px 1px 2px black;
   } 
   &.active {
