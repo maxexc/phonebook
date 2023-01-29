@@ -24,10 +24,10 @@ export default function Contacts() {
     <Main>
       {isLoading && <Loader />}
       {/* {isLoggedIn ? ( ) :  (<div>Please Login or register</div>) } */}
-        <h2> 
+        {/* <h2> 
             <PeopleAlt fontSize="large" sx={{ mr: 1 }} />
                  Your Contacts 
-        </h2>
+        </h2> */}
         
       <ContactForm />
       <Filter />

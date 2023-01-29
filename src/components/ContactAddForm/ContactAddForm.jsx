@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { addContact } from 'redux/contacts/operations';
 import { Title } from './ContactAddForm.styled'
 import { Box, Button, Container, InputAdornment, TextField } from '@mui/material';
-import { PersonAddAlt1 } from '@mui/icons-material';
+import { PeopleAlt, PersonAddAlt1 } from '@mui/icons-material';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 
 
@@ -63,7 +63,10 @@ export const ContactForm = () => {
         // sx={{ margin: '0 auto' }}
         onSubmit={handleFormSubmit}
       >
-        <Title >Add new contact</Title>
+        <Box sx={{ display: 'flex', alignItems: 'flex-end', gap: "10px" }}>
+          <Title >Add new contact</Title>
+          <PeopleAlt />
+        </Box>
         <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
           <PersonAddAlt1 sx={{ color: '#0f7ec9', mr: 1, my: 0.5 }} />
           <TextField

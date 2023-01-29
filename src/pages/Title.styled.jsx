@@ -21,19 +21,18 @@ export const TitleLogin = styled.h1`
   width: 80px;
   padding-bottom: 5px;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: #fff;  
   /* box-shadow: ; */
   /* color: #0f7ec9; */
 `;
 
 export const Main = styled.main`
-
-/* height: 100vh; */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-  margin: 0 auto;
-  padding-top: 22px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin: 0 auto; */
+  padding-top: 54px;
   background-image: url('${image}');
 `
