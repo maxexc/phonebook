@@ -8,6 +8,7 @@ import { PeopleAlt, PersonAddAlt1 } from '@mui/icons-material';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import { selectСontacts } from 'redux/contacts/selectors';
 import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -16,7 +17,7 @@ export const ContactForm = () => {
     const [number, setNumber] = useState('');
     const dispatch = useDispatch(); 
     const contacts = useSelector(selectСontacts);
-    console.log(contacts);
+    // console.log(contacts);
 
     const handleInputChange = event => {
         switch (event.currentTarget.name) {
@@ -129,7 +130,7 @@ export const ContactForm = () => {
             Add contact
           </Button>  
 
-          <ToastContainer />                     
+          <ToastContainer position="top-center" autoClose={1500}/>                   
     </Box>
   );
 };
