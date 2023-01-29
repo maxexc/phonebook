@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/contacts/operations';
 
-import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined';
-import { Item, DeleteContact } from './Contact.styled';
+import { Item, DeleteContact, Circle } from './Contact.styled';
+// import { Person, PersonOutline, AccountBox } from '@mui/icons-material';
 
 export const Contact = ({ id, number, name }) => {
   const dispatch = useDispatch();
@@ -15,11 +15,13 @@ export const Contact = ({ id, number, name }) => {
 
   return (    
       <Item >
-        <AccountBoxIcon fontSize="large" sx={{ mr: 1 }} />
+        {/* <Person sx={{ mr: 1 }} /> */}
+        <Circle>{name.charAt(0).toUpperCase()} </Circle>    
+        
         <p>
           {name}: <span>{number}</span>
         </p>
-        <DeleteContact type="button" onClick={onDelete}>Delete
+        <DeleteContact type="button" onClick={onDelete}>Del
           <DeleteForeverOutlinedIcon sx={{ fontSize: 30 }} />
         </DeleteContact>
       </Item>    
