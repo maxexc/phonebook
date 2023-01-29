@@ -48,19 +48,12 @@ export const ContactForm = () => {
       return;
     }
 
-        // toaster
-        // toaster
-        // toaster
-
         dispatch(addContact(newContact));
+        toast.success(`You have added a new contact ${newContact.name}`);
 
         setName('');
         setNumber('');
     }
-
-    // const nameInputId = nanoid();
-    // const numberInputId = nanoid();
-
 
   return (
     <Box
@@ -72,7 +65,6 @@ export const ContactForm = () => {
         component="form"
         autoComplete="off"
         maxWidth="420px"
-        // sx={{ margin: '0 auto' }}
         onSubmit={handleFormSubmit}
       >
         <Box sx={{ display: 'flex', alignItems: 'flex-end', gap: "10px" }}>
