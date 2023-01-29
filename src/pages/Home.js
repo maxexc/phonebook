@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import { ContentTitle, HeroSection, Img, ImgWrapper, Main } from "./Title.styled";
 import Stack from '@mui/material/Stack';
-import { Container, Paper } from "@mui/material";
+import { Container, Paper, Typography } from "@mui/material";
 import image from '../images/writing-923882.jpg';
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 
@@ -17,8 +17,8 @@ export const Home = () => {
           pt: 4,
           pb: 4
         }} maxWidth="xl">
-          <AutoStoriesIcon sx={{ fontSize: 80, mb: 2, color: '#0f7ec9' }} />
-          <ContentTitle>Welcome to your Phonebook application!</ContentTitle>
+          <AutoStoriesIcon sx={{ fontSize: 80, mb: 2, color: '#0f7ec9' }} />        
+          <Typography variant="h1" sx={{ fontStyle: 'italic', fontFamily: 'monospace', fontSize: '24px', fontWeight: '700',}}>Welcome to your  <span style={{ color: '#0f7ec9', }} >Phonebook</span> application!</Typography>
           <HeroSection>
             <ImgWrapper>
               <Img src={image} alt="woman width notebook" width="320" />
