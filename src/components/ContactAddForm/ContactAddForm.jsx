@@ -106,14 +106,7 @@ export const ContactForm = () => {
             fullWidth
             id="number"
             label="Number"
-            inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
-            // InputProps={{
-            //   startAdornment: (
-            //     <InputAdornment position="start">
-            //       <PhoneIphoneIcon sx={{ color: '#0f7ec9' }} />
-            //     </InputAdornment>
-            //   ),
-            // }}
+            inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}            
           />
         </Box>       
           <Button

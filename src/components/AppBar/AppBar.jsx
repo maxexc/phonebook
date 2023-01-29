@@ -14,7 +14,10 @@ export const AppNavBar = () => {
     console.log(isLoggedIn);
   
   return (
-    <AppBar position="static" sx={{  color: ""}}>
+    <AppBar
+      // position="static"
+      // sx={{ backgroundColor: '#1cb6cd', flexShrink: 0 }}
+    >
       <Container >
         {/* <Header > */}
         <Toolbar>
@@ -25,6 +28,7 @@ export const AppNavBar = () => {
             href=""
             sx={{
               mr: 5,
+              // mb: 0.5,
               display: { xs: 'none', md: 'flex' },
               flexGrow: 1,
               fontFamily: 'revert-layer',

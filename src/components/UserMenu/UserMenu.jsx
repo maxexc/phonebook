@@ -1,7 +1,9 @@
+import { Logout } from "@mui/icons-material";
+import { Button, Stack } from "@mui/material";
 import { useAuth } from "Hooks";
 import { useDispatch } from "react-redux";
 import { logOut } from "redux/auth/operations";
-import { UserName, Wrapper } from "./UserMenu.styled";
+import { UserName } from "./UserMenu.styled";
 
 
 export const UserMenu = () => {
@@ -9,12 +11,18 @@ export const UserMenu = () => {
   const { user } = useAuth();
 
   return (
-    <Wrapper >
+    <Stack direction="row" spacing={2} alignItems="center">
       <UserName >Welcome, {user.name}</UserName>
-      <button type="button" onClick={() => dispatch(logOut())}>
+      <Button
+        variant="contained"
+        endIcon={<Logout />}
+        type="button"
+        onClick={() => dispatch(logOut())} 
+        sx={{ backgroundColor: '#1cb6cd', flexShrink: 0 }}
+      >
         Logout
-      </button>
-    </Wrapper>
+      </Button>
+    </Stack >
   );
 };
 
