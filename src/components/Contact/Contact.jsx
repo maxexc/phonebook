@@ -4,6 +4,8 @@ import { deleteContact } from 'redux/contacts/operations';
 
 import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined';
 import { Item, DeleteContact, Circle } from './Contact.styled';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // import { Person, PersonOutline, AccountBox } from '@mui/icons-material';
 
 export const Contact = ({ id, number, name }) => {
@@ -11,6 +13,7 @@ export const Contact = ({ id, number, name }) => {
 
   const onDelete = () => {
     dispatch(deleteContact(id));
+    toast.error(`Contact is removed from List.`, {position: "top-right", theme: "dark",}); 
   };
 
   return (    
