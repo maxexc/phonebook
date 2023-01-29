@@ -23,7 +23,7 @@ const Register = () => {
       <TsparticlesLayout />
       <Title>Registration</Title>
       <RegisterForm />   
-      <ToastContainer />
+      <ToastContainer autoClose={1500}/>
     </Container>
   );
 };
