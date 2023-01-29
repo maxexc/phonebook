@@ -4,19 +4,21 @@ import { ContentTitle, HeroSection, Img, ImgWrapper, Main } from "./Title.styled
 import Stack from '@mui/material/Stack';
 import { Container, Paper } from "@mui/material";
 import image from '../images/writing-923882.jpg';
+import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 
 
 export const Home = () => {
     return (
       <Main>
         <Container sx={{
-          // display: 'flex',
-          // flexDirection: 'column',
-          // alignItems: 'center',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
           pt: 4,
           pb: 4
         }} maxWidth="xl">
-          <ContentTitle>Welcome to your phonebook application!</ContentTitle>
+          <AutoStoriesIcon sx={{ fontSize: 80, mb: 2, color: '#0f7ec9' }} />
+          <ContentTitle>Welcome to your Phonebook application!</ContentTitle>
           <HeroSection>
             <ImgWrapper>
               <Img src={image} alt="woman width notebook" width="320" />

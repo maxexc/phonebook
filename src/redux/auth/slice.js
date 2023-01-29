@@ -21,7 +21,9 @@ const authSlice = createSlice({
           state.isLoggedIn = true;
           toast.success('Your account was successfully created');
         })
-        .addCase(register.rejected, (state, action) => state)
+        .addCase(register.rejected, (state, action) => {
+          toast.error('Incorrect email or password! Please try again');
+        })
         .addCase(logIn.fulfilled, (state, action) => {
           state.user = action.payload.user;
           state.token = action.payload.token;
