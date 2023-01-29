@@ -7,7 +7,6 @@ import { selectLoading } from 'redux/contacts/selectors';
 import ContactForm from 'components/ContactAddForm/ContactAddForm';
 import { Main } from './Title.styled';
 
-import PeopleAlt from '@mui/icons-material/PeopleAlt';
 import Loader from 'components/Loader/Loader';
 
 

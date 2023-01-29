@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import { filterContacts } from 'redux/contacts/filterSlice';
 import { selectFilter } from 'redux/contacts/selectors';
@@ -15,8 +16,11 @@ export const Filter = () => {
         dispatch(filterContacts(event.currentTarget.value));
     };  
      
-    return (       
+    return (    
         <label>
+          <Typography variant="h2" gutterBottom>
+              Filter
+          </Typography >
             <FilterTitle>Filter</FilterTitle>  
             <Filterinput
                 type="text"

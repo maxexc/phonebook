@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid';
 import { useDispatch } from 'react-redux';
 import { addContact } from 'redux/contacts/operations';
 import { Title } from './ContactAddForm.styled'
-import { Box, Button, Container, InputAdornment, TextField } from '@mui/material';
+import { Box, Button, TextField } from '@mui/material';
 import { PeopleAlt, PersonAddAlt1 } from '@mui/icons-material';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 
