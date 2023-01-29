@@ -1,3 +1,6 @@
+import AutoStoriesIcon from "@mui/icons-material/AutoStories";
+import { AppBar, Box, Toolbar, Typography } from "@mui/material";
+import { Container } from "@mui/system";
 import { AuthNav } from "components/AuthNav/AuthNav";
 import Navigation from "components/Navigation/Navigation";
 import { UserMenu } from "components/UserMenu/UserMenu";
@@ -5,15 +8,45 @@ import { useAuth } from "Hooks";
 import { Header } from "./AppBar.styled";
 
 
-export const AppBar = () => {
+export const AppNavBar = () => {
   const { isLoggedIn } = useAuth();
 
     console.log(isLoggedIn);
   
-    return (
-      <Header >
-        <Navigation />
-        {isLoggedIn ? <UserMenu />  : <AuthNav />}
-      </Header>
+  return (
+    <AppBar position="static" sx={{  color: ""}}>
+      <Container >
+        <Header >
+        <Toolbar>
+         <Typography
+            variant="h5"
+            noWrap
+            component="a"
+            href=""
+            sx={{
+              mr: 5,
+              display: { xs: 'none', md: 'flex' },
+              flexGrow: 1,
+              fontFamily: 'monospace',
+              fontWeight: 500,
+              color: 'inherit',
+              textDecoration: 'none',
+            }}
+          ><AutoStoriesIcon />
+        Phonebook
+        </Typography>
+        <Box sx={{ flexGrow: 24,
+        fontWeight: 700,
+        textDecoration: 'none'
+         }}>
+            
+              
+              <Navigation />
+              </Box>
+            {isLoggedIn ? <UserMenu /> : <AuthNav />}
+            </Toolbar>
+        </Header>
+      </Container>
+    </AppBar>
     );
   };

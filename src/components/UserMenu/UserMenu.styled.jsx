@@ -8,4 +8,5 @@ export const Wrapper = styled.div`
 
 export const UserName = styled.div`
     font-weight: 700;
+    /* color: black; */
 `
