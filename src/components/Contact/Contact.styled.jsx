@@ -31,7 +31,11 @@ export const DeleteContact = styled.button`
   margin-left: auto;
   background: transparent;
   border: none;
-  cursor: pointer;
+  cursor: pointer;  
+  /* :hover {
+    transition: color 150ms linear;
+    color: tomato;
+  } */
   :hover > svg {
     transition: color 150ms linear;
     color: tomato;

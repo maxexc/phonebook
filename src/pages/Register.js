@@ -3,6 +3,9 @@ import { RegisterForm } from 'components/RegisterForm/RegisterForm';
 import TsparticlesLayout from 'components/TsparticlesLayout/TsparticlesLayout';
 import { Title } from './Title.styled';
 
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+
 const Register = () => {
   return (
     <Container
@@ -19,7 +22,8 @@ const Register = () => {
       >
       <TsparticlesLayout />
       <Title>Registration</Title>
-      <RegisterForm />
+      <RegisterForm />   
+      <ToastContainer />
     </Container>
   );
 };

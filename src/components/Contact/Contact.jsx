@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/contacts/operations';
 
-import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined';
 import { Item, DeleteContact, Circle } from './Contact.styled';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { DeleteForeverOutlined } from '@mui/icons-material';
 // import { Person, PersonOutline, AccountBox } from '@mui/icons-material';
 
 export const Contact = ({ id, number, name }) => {
@@ -25,7 +25,7 @@ export const Contact = ({ id, number, name }) => {
           {name}: <span>{number}</span>
         </p>
         <DeleteContact type="button" onClick={onDelete}>Del
-          <DeleteForeverOutlinedIcon sx={{ fontSize: 30 }} />
+          <DeleteForeverOutlined sx={{ fontSize: 30 }} />
         </DeleteContact>
       </Item>    
   );
