@@ -23,7 +23,7 @@ export const Home = () => {
             </ImgWrapper>
             <Paper sx={{ p: 4 }} elevation={3}>
               <Stack
-                direction="row"
+                direction="column"
                 spacing={2}
                 justifyContent="center"
                 alignItems="center"
@@ -31,6 +31,7 @@ export const Home = () => {
                 fontFamily='monospace'
                 sx={{ maxWidth: '600px', margin: '0 auto' }}
               >
+                <ContentTitle>About</ContentTitle>
                 {/* <Image name="home.jpg" alt="A man looks at his laptop " w="300" /> */}
                 <p>
                   This app allows you to be always close to your contacts. To start
