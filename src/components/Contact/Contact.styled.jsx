@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Item = styled.li`
   display: flex;
   align-items: center;
+  min-width: 292px;
   width: 100%;
   padding: 8px 0px;
   transition: border-bottom 250ms linear;
