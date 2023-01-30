@@ -64,12 +64,9 @@ export const Img = styled.img`
 `;
 
 export const ContentTitle = styled.h2`
-  display: flex;
-  justify-content: center;
   font-size: 24px;
   line-height: 1.4;
-  margin: 0 auto;
-  /* position: relative;
+  position: relative;
   margin-bottom: 20px;
   &::after {
     content: '';
@@ -80,10 +77,10 @@ export const ContentTitle = styled.h2`
     height: 1px;
     width: 300px;
     background-color: #000;
-    @media screen and (max-width: 820px) {
+    @media screen and (max-width: 830px) {
       width: 200px;
     }
-  } */
+  }
 `;
 
 export const ImgWrapper = styled.div`
@@ -92,5 +89,13 @@ export const ImgWrapper = styled.div`
   @media screen and (max-width: 767px) {
     width: 100%;
     margin-bottom: 30px;
+  }
+`;
+
+export const ContentText = styled.p`
+  font-size: 24px;
+  line-height: 1.7;
+  @media screen and (max-width: 920px) {
+    font-size: 18px;
   }
 `;
