@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ContentText, ContentTitle, HeroSection, Img, ImgWrapper, Main } from "./Title.styled";
 import { Container, Paper, Typography } from "@mui/material";
-import image from '../images/writing-923882.jpg';
+import image from '../images/writing-011.jpg';
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 
 
