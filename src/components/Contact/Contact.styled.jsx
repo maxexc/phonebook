@@ -6,7 +6,8 @@ export const Item = styled.li`
   min-width: 292px;
   width: 100%;
   padding: 8px 0px;
-  transition: border-bottom 250ms linear, background-color 250ms linear, color 250ms linear, font-weight 150ms linear;;
+  transition: border-bottom 250ms linear, background-color 250ms linear, color 250ms linear;
+  /* font-weight 150ms linear; */
   border-bottom: 1px solid rgba(0, 0, 0, 0.54);
   :hover {
     /* transition: font-weight 150ms linear; */
