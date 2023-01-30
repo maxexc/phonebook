@@ -79,6 +79,7 @@ export const ContentTitle = styled.h2`
     background-color: #000;
     @media screen and (max-width: 830px) {
       width: 200px;
+      font-size: 20px;
     }
   }
 `;
@@ -95,7 +96,11 @@ export const ImgWrapper = styled.div`
 export const ContentText = styled.p`
   font-size: 24px;
   line-height: 1.7;
+  @media screen and (max-width: 1120px) {
+    font-size: 20px;
+  }
   @media screen and (max-width: 920px) {
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 1.5;
   }
 `;
