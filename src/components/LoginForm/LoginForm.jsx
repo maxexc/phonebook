@@ -60,7 +60,6 @@ export default function LoginForm() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    const form = e.currentTarget;
     if (email.trim() === "") {
       toast.info('Sorry, E-mail field cannot be empty');
       return;
@@ -71,12 +70,10 @@ export default function LoginForm() {
     }
     
     dispatch(logIn({ 
-        email: form.elements.email.value.trim(), 
-        password: form.elements.password.value, 
+        email: email.trim(), 
+        password: password, 
     }));
     
-    form.reset();
-    // --- either  ---
     // setEmail('');
     // setPassword('');
   };
