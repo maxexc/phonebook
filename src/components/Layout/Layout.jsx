@@ -3,7 +3,6 @@ import Loader from "components/Loader/Loader"
 import { Suspense } from "react"
 import { Toaster } from "react-hot-toast"
 import { Outlet } from "react-router-dom"
-// import { Container } from "./Layout.styled"
 
 
 export const Layout = () => {

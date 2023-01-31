@@ -15,7 +15,7 @@ const Register = () => {
           alignItems: 'center',
           justifyContent: 'center',
           flexGrow: 1,
-          pt: 2,
+          pt: 10,
           pb: 2,          
         }}
         maxWidth="xl"

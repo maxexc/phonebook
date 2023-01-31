@@ -7,10 +7,7 @@ import { Box, Button, TextField } from '@mui/material';
 import { PeopleAlt, PersonAddAlt1 } from '@mui/icons-material';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import { selectСontacts } from 'redux/contacts/selectors';
-// import { toast } from 'react-toastify';
 import { toast, ToastContainer } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
-
 
 
 export const ContactForm = () => {   

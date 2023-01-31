@@ -61,11 +61,11 @@ export default function LoginForm() {
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
-    if (form.elements.email.value.trim() === "") {
+    if (email.trim() === "") {
       toast.info('Sorry, E-mail field cannot be empty');
       return;
     }
-    if (form.elements.password.value.length < 6) {
+    if (password.length < 7) {
       toast.warn('Password must contain at least 7 characters');
       return;
     }

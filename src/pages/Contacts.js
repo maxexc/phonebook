@@ -24,11 +24,7 @@ export default function Contacts() {
     <Main>
       <Container sx={{ display: "flex", flexDirection: "column", alignItems: "center", pt: 2, pb: 4 }} maxWidth="xl">
       {isLoading && <Loader />}
-      {/* {isLoggedIn ? ( ) :  (<div>Please Login or register</div>) } */}
-        {/* <h2> 
-            <PeopleAlt fontSize="large" sx={{ mr: 1 }} />
-                 Your Contacts 
-        </h2> */}
+      {/* {isLoggedIn ? ( ) :  (<div>Please Login or register</div>) } */}        
         
       <ContactForm />
       <Filter />

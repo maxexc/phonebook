@@ -6,7 +6,6 @@ import { Item, DeleteContact, Circle } from './Contact.styled';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { DeleteForeverOutlined } from '@mui/icons-material';
-// import { Person, PersonOutline, AccountBox } from '@mui/icons-material';
 
 export const Contact = ({ id, number, name }) => {
   const dispatch = useDispatch();
@@ -18,9 +17,7 @@ export const Contact = ({ id, number, name }) => {
 
   return (    
       <Item >
-        {/* <Person sx={{ mr: 1 }} /> */}
-        <Circle>{name.charAt(0).toUpperCase()} </Circle>    
-        
+        <Circle>{name.charAt(0).toUpperCase()} </Circle> 
         <p>
           {name}: <span>{number}</span>
         </p>

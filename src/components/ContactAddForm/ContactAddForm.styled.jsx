@@ -16,7 +16,6 @@ export const PhonebookForm = styled.form`
     flex-direction: column;
     max-width: 640px;
     min-width: 340px;
-    /* width: 355px; */
     padding: 20px;
     border: 1px solid black;
     border: 0.3px solid darkcyan;

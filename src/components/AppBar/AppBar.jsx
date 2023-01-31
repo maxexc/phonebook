@@ -6,8 +6,6 @@ import Navigation from "components/Navigation/Navigation";
 import { UserMenu } from "components/UserMenu/UserMenu";
 import { useAuth } from "Hooks";
 import { Link } from "react-router-dom";
-// import { Header } from "./AppBar.styled";
-
 
 export const AppNavBar = () => {
   const { isLoggedIn } = useAuth();

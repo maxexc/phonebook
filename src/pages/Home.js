@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ContentText, ContentTitle, HeroSection, Img, ImgWrapper, Main } from "./Title.styled";
 import { Container, Paper, Typography } from "@mui/material";
-import image from '../images/writing-011.jpg';
+import image from '../images/writing-002.jpg';
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 
 
@@ -26,7 +26,7 @@ export const Home = () => {
                 <ContentText>
                   Phonebook app is an easy to use contact manager app that gives you facility 
                   of saving and viewing your contacts, so you never lose your contacts.
-                  To use the application right now, just <b><Link to="/register">create</Link></b> an account, 
+                  To use the application right now, just <b><Link to="/register" title="Push me)">create</Link></b> an account, 
                   and your contacts will always be close to you at any time!
                 </ContentText>
             </Paper>
