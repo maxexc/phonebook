@@ -15,6 +15,5 @@ export const MenuLink = styled(NavLink)`
   &.active {
     text-shadow: 1px 1px 2px black;
     border-bottom: 1px solid #1cb6cd;
-    /* color: #1cb6cd; */
   }
 `;

@@ -7,12 +7,9 @@ export const Item = styled.li`
   width: 100%;
   padding: 8px 0px;
   transition: border-bottom 250ms linear, background-color 250ms linear, color 250ms linear;
-  /* font-weight 150ms linear; */
   border-bottom: 1px solid rgba(0, 0, 0, 0.54);
   :hover {
-    /* transition: font-weight 150ms linear; */
     border-bottom: 1px solid #1363df;
-    /* font-weight: 500; */
     color: #003380;
     /* box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.15); */
     text-shadow: 3px 6px 6px rgba(0, 0, 0, 0.15);
