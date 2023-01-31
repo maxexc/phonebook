@@ -45,9 +45,9 @@ const authSlice = createSlice({
           state.isRefreshing = false;
           // toast.success('Wellcome back!')
         })
-        .addCase(refreshUser.pending, (state, action) => {
-          state.isRefreshing = false;
-        })        
+        // .addCase(refreshUser.pending, (state, action) => {
+        //   state.isRefreshing = false;
+        // })        
   })
 
 export const authReducer = authSlice.reducer;
