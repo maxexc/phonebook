@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Item = styled.li`
   display: flex;
   align-items: center;
+  font-size: 18px;
   min-width: 292px;
   width: 100%;
   padding: 8px 0px;
@@ -43,6 +44,7 @@ export const DeleteContact = styled.button`
 `;
 
 export const Circle = styled.div`
+margin-top: 3px;
 width: 30px;
 height: 30px;
 border-radius: 50%;
