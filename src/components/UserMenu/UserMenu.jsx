@@ -16,7 +16,6 @@ export const UserMenu = () => {
       >
         Welcome, {user.name}
       </Typography>
-      {/* <UserName >Welcome, {user.name}</UserName> */}
       <Button
         variant="contained"
         endIcon={<Logout />}

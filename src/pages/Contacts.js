@@ -23,12 +23,9 @@ export default function Contacts() {
   return (
     <Main>
       <Container sx={{ display: "flex", flexDirection: "column", alignItems: "center", pt: 2, pb: 4 }} maxWidth="xl">
-      {isLoading && <Loader />}
-      {/* {isLoggedIn ? ( ) :  (<div>Please Login or register</div>) } */}        
-        
+      {isLoading && <Loader />}            
       <ContactForm />
       <Filter />
-      {/* <div>{isLoading && 'Request in progress...'}</div> */}
       <ContactList />      
       </Container>
     </Main>
