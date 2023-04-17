@@ -4,6 +4,7 @@ export const Item = styled.li`
   display: flex;
   align-items: center;
   font-size: 18px;
+  font-weight: 600;
   min-width: 292px;
   width: 100%;
   padding: 8px 0px;
