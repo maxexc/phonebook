@@ -10,7 +10,6 @@ export const Title = styled.h1`
   padding-bottom: 5px;
   border-radius: 10px;
   background-color: #fff;
-  /* color:  #065b94; */
 `;
 
 export const TitleLogin = styled.h1`
@@ -22,18 +21,15 @@ export const TitleLogin = styled.h1`
   padding-bottom: 5px;
   border-radius: 10px;
   background-color: #fff;  
-  /* color: #0f7ec9; */
 `;
 
 export const Main = styled.main`
-  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-top: 54px;  
 `
-/* background-image: url('${image }'); */
 
 export const HeroSection = styled.section`
   margin-top: 60px;
@@ -100,6 +96,5 @@ export const ContentText = styled.p`
   @media screen and (min-width: 921px) {
     font-size: 21px;
     line-height: 1.8;
-  }
-  
+  }  
 `;

@@ -35,7 +35,6 @@ export const RegisterForm = () => {
       default:
         return;
     };
-    // console.log(name, email, password);
 }
       
 
@@ -61,10 +60,6 @@ export const RegisterForm = () => {
         password: password.trim(),
       })
     );
-
-    // setName('');
-    // setEmail('');
-    // setPassword('');
   };
 
   return (

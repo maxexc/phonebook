@@ -15,7 +15,6 @@ export const ContactForm = () => {
     const [number, setNumber] = useState('');
     const dispatch = useDispatch(); 
     const contacts = useSelector(selectСontacts);
-    // console.log(contacts);
 
     const handleInputChange = event => {
         switch (event.currentTarget.name) {
@@ -81,8 +80,7 @@ export const ContactForm = () => {
             required
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             size="small"
-            margin="none"          
-            // fullWidth
+            margin="none"     
             id="name"
             label="Name"
             inputProps={{
@@ -113,7 +111,6 @@ export const ContactForm = () => {
         </Box>       
           <Button
             type="submit"
-            // fullWidth
             variant="contained"
             sx={{ mr: -1, mt: "18px", width: '200px' }}
           >
