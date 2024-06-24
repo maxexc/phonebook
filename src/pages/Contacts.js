@@ -14,7 +14,6 @@ import { Container } from '@mui/system';
 export default function Contacts() {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectLoading);
-  // console.log(isLoading);
 
   useEffect(() => {
     dispatch(fetchContacts());
@@ -23,10 +22,10 @@ export default function Contacts() {
   return (
     <Main>
       <Container sx={{ display: "flex", flexDirection: "column", alignItems: "center", pt: 2, pb: 4 }} maxWidth="xl">
-      {isLoading && <Loader />}            
-      <ContactForm />
-      <Filter />
-      <ContactList />      
+        {isLoading && <Loader />}
+        <ContactForm />
+        <Filter />
+        <ContactList />
       </Container>
     </Main>
   );

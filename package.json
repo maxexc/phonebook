@@ -26,7 +26,7 @@
     "react-scripts": "5.0.1",
     "react-spinners": "^0.13.8",
     "react-toastify": "^9.1.1",
-    "react-tsparticles": "^2.8.0",
+    "react-tsparticles": "^2.7.1",
     "redux-persist": "^6.0.0",
     "styled-components": "^5.3.6",
     "tsparticles": "^2.8.0",

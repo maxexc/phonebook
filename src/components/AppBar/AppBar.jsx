@@ -13,10 +13,7 @@ export const AppNavBar = () => {
     console.log(isLoggedIn);
   
   return (
-    <AppBar
-      // position="static"
-      // sx={{ backgroundColor: '#1cb6cd', flexShrink: 0 }}
-    >
+    <AppBar>
       <Container >
         <Toolbar>
           <Typography
