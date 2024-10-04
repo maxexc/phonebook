@@ -1,8 +1,8 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-// axios.defaults.baseURL = process.env.REACT_APP_API_URL;
-axios.defaults.baseURL = 'https://connections-api.goit.global/';
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
+
 
 // GET @ /contacts
 export const fetchContacts = createAsyncThunk(
