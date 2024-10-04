@@ -9,13 +9,14 @@ import { Link } from "react-router-dom";
 
 export const AppNavBar = () => {
   const { isLoggedIn } = useAuth();
-
-    console.log(isLoggedIn);
+    // console.log(isLoggedIn);
   
   return (
     <AppBar>
       <Container >
-        <Toolbar>
+        <Toolbar
+          sx={{paddingInline: { xs: '6px', sm: '16px' } }}
+        >
           <Typography
             variant="h5"
             noWrap

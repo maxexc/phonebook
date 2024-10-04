@@ -1,0 +1,31 @@
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #89d9da;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --neutral-color: #6c757d;
+    --background-color: #f8f9fa;
+    --hover-color: rgba(0, 123, 255, 0.1);
+    --shadow-color: rgba(0, 0, 0, 0.15);
+    --font-size-base: 16px;
+    --font-size-mobile: 14px;
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --font-size-base: var(--font-size-mobile);
+    }
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 8px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

@@ -6,7 +6,7 @@ import { Title } from './ContactAddForm.styled'
 import { Box, Button, TextField } from '@mui/material';
 import { PeopleAlt, PersonAddAlt1 } from '@mui/icons-material';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
-import { selectСontacts } from 'redux/contacts/selectors';
+import { selectContacts } from 'redux/contacts/selectors';
 import { toast, ToastContainer } from 'react-toastify';
 
 
@@ -14,7 +14,7 @@ export const ContactForm = () => {
     const [name, setName] = useState('');
     const [number, setNumber] = useState('');
     const dispatch = useDispatch(); 
-    const contacts = useSelector(selectСontacts);
+    const contacts = useSelector(selectContacts);
 
     const handleInputChange = event => {
         switch (event.currentTarget.name) {
@@ -27,7 +27,7 @@ export const ContactForm = () => {
           default:
           return
         };
-        console.log(name, number);
+        // console.log(name, number);
     }
 
     const handleFormSubmit = event => {
@@ -71,7 +71,11 @@ export const ContactForm = () => {
         <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
           <PersonAddAlt1 sx={{ color: '#0f7ec9', mr: 1, my: 0.5 }} />
           <TextField
-            sx={{ width: '260px' }}
+            sx={{ 
+              width: '260px', 
+              color: 'black',  
+              '& .MuiInputBase-input': { color: 'black' },  
+            }}
             variant="standard"
             onChange={handleInputChange}
             type="text"
@@ -93,7 +97,11 @@ export const ContactForm = () => {
         <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
           <PhoneIphoneIcon sx={{ color: '#0f7ec9', mr: 1, my: 0.5 }} />
           <TextField
-            sx={{ width: '260px' }}
+            sx={{ 
+              width: '260px', 
+              color: 'black',  
+              '& .MuiInputBase-input': { color: 'black' },  
+            }}
             variant="standard"
             onChange={handleInputChange}
             type="tel"
@@ -106,7 +114,7 @@ export const ContactForm = () => {
             fullWidth
             id="number"
             label="Number"
-            inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}            
+            inputProps={{ inputMode: 'numeric', pattern: '[+]?[0-9]*' }}            
           />
         </Box>       
           <Button

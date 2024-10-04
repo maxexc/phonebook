@@ -1,8 +1,7 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-// axios.defaults.baseURL = 'https://connections-api.herokuapp.com/'; // server changed
-axios.defaults.baseURL = 'https://connections-api.goit.global/';
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 
 
 // Utility to add JWT
@@ -24,9 +23,9 @@ export const register = createAsyncThunk(
   async (credentials, thunkAPI) => {
     try {
       const res = await axios.post('/users/signup', credentials);
+
       // After successful registration, add the token to the HTTP header
       setAuthHeader(res.data.token);
-      console.log(res.data);
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -43,9 +42,9 @@ export const logIn = createAsyncThunk(
   async (credentials, thunkAPI) => {
     try {
       const res = await axios.post('/users/login', credentials);
+
       // After successful registration, add the token to the HTTP header
       setAuthHeader(res.data.token);
-      console.log(res.data);
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -60,6 +59,7 @@ export const logIn = createAsyncThunk(
 export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
   try {
     await axios.post('/users/logout');
+
     // After a successful logout, remove the token from the HTTP header
     clearAuthHeader();
   } catch (error) {
@@ -79,12 +79,11 @@ export const refreshUser = createAsyncThunk(
     const state = thunkAPI.getState();
     const persistedToken = state.auth.token;
     // const state = thunkAPI.getState().auth;
-    console.log(persistedToken);
 
     if (persistedToken === null) {
       return thunkAPI.rejectWithValue('No valid token');
     } else {
-      console.log("Refreshing user");
+      // console.log("Refreshing user");
       setAuthHeader(persistedToken);
       // token.set(persistedToken);
     }
