@@ -1,30 +1,62 @@
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { deleteContact } from 'redux/contacts/operations';
-
-import { Item, DeleteContact, Circle } from './Contact.styled';
+import { deleteContact, patchContact } from 'redux/contacts/operations';
+import { Item, DeleteContact, PatchContact, Circle, ButtonsWrapper, ContactInfo, Name, Number, Wrapper } from './Contact.styled';
+import { DeleteForeverOutlined, EditOutlined } from '@mui/icons-material';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { DeleteForeverOutlined } from '@mui/icons-material';
+import Modal from 'components/Modal/Modal';  
 
 export const Contact = ({ id, number, name }) => {
   const dispatch = useDispatch();
+  const [isEditing, setIsEditing] = useState(false);
+  const [editName, setEditName] = useState(name);
+  const [editNumber, setEditNumber] = useState(number);
+
+  const onPatch = () => {
+    dispatch(patchContact({ id, name: editName, number: editNumber }));
+    setIsEditing(false);
+    toast.success(`Nice! ${editName} is looking fresh and updated! 🎉`, { position: "top-right" });
+  };
 
   const onDelete = () => {
     dispatch(deleteContact(id));
-    toast.error(`Contact is removed from List.`, {position: "top-right", theme: "dark",}); 
+    toast.error(`Oh no! ${name} is gone. Say goodbye! 👋`, { position: "top-right", theme: "dark" });
   };
 
-  return (    
-      <Item >
-        <Circle>{name.charAt(0).toUpperCase()} </Circle> 
-        <p>
-          {name}: <span>{number}</span>
-        </p>
-        <DeleteContact type="button" onClick={onDelete}>Del
-          <DeleteForeverOutlined sx={{ fontSize: 30 }} />
-        </DeleteContact>
-      </Item>    
+  return (
+    <>
+      <Item>
+        <ContactInfo>
+          <Circle>{name.charAt(0).toUpperCase()}</Circle>
+          <Wrapper>
+            <Name>{name}</Name>
+            <Number>{number}</Number>
+          </Wrapper>          
+        </ContactInfo>
+
+        <ButtonsWrapper>
+          <PatchContact type="button" onClick={() => setIsEditing(true)}>
+            <EditOutlined sx={{ fontSize: 30 }} />
+          </PatchContact>
+
+          <DeleteContact type="button" onClick={onDelete}>
+            <DeleteForeverOutlined sx={{ fontSize: 30 }} />
+          </DeleteContact>
+        </ButtonsWrapper>
+      </Item>
+
+      <Modal
+        isEditing={isEditing}
+        setIsEditing={setIsEditing}
+        editName={editName}
+        setEditName={setEditName}
+        editNumber={editNumber}
+        setEditNumber={setEditNumber}
+        onPatch={onPatch}
+      />
+    </>
   );
 };
 

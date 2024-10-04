@@ -1,8 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-// axios.defaults.baseURL = 'https://connections-api.herokuapp.com';  // server changed
-axios.defaults.baseURL = 'https://connections-api.goit.global/';
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 
 
 // GET @ /contacts
@@ -11,7 +10,6 @@ export const fetchContacts = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const res = await axios.get('/contacts');
-      console.log(res.data);
 
       return res.data;
     } catch (error) {
@@ -26,7 +24,6 @@ export const addContact = createAsyncThunk(
   async (contact, thunkAPI) => {
     try {
       const response = await axios.post('/contacts', contact);
-      console.log(response.data);
 
       return response.data;
     } catch (e) {
@@ -35,13 +32,27 @@ export const addContact = createAsyncThunk(
   }
 );
 
+// РTACH @ /contacts
+export const patchContact = createAsyncThunk(
+  'contacts/patchContact',
+  async ({ id, name, number }, thunkAPI) => {
+    try {
+      const response = await axios.patch(`/contacts/${id}`, { name, number });
+
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+
 // DELETE @ /contacts/:id
 export const deleteContact = createAsyncThunk(
   'contacts/deleteContact',
   async (contactId, thunkAPI) => {
     try {
       const response = await axios.delete(`/contacts/${contactId}`);
-      console.log(response.data);
 
       return response.data;
     } catch (e) {

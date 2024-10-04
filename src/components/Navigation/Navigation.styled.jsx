@@ -16,4 +16,7 @@ export const MenuLink = styled(NavLink)`
     text-shadow: 1px 1px 2px black;
     border-bottom: 1px solid #1cb6cd;
   }
+  @media screen and (max-width: 406px) {
+  margin: 5px; 
+}
 `;
