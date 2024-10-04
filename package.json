@@ -1,8 +1,8 @@
 {
-  "name": "goit-react-hw-08-phonebook",
+  "name": "phonebook",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://maxexc.github.io/goit-react-hw-08-phonebook/",
+  "homepage": "https://maxexc.github.io/phonebook/",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
