@@ -6,6 +6,7 @@ import { refreshUser } from 'redux/auth/operations';
 import { useAuth } from 'Hooks';
 import { RestrictedRoute } from 'components/RestrictedRoute/RestrictedRoute';
 import { PrivateRoute } from 'components/PrivateRoute/PrivateRoute';
+import TsparticlesLayout from 'components/TsparticlesLayout/TsparticlesLayout';
 
 
 const Home = lazy(() => import('../../pages/Home'));
@@ -31,9 +32,17 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home/>}/>
           <Route path="/login" 
-            element={<RestrictedRoute component={Login} redirectTo='/contacts' />} />
+                element={
+                  <>
+                    <TsparticlesLayout />
+                    <RestrictedRoute component={Login} redirectTo="/contacts" />
+                  </>} />
           <Route path="/register" 
-            element={<RestrictedRoute component={Register} redirectTo='/contacts' />} />
+                element={
+                  <>
+                    <TsparticlesLayout /> 
+                    <RestrictedRoute component={Register} redirectTo="/contacts" />
+                  </>} />
           <Route path='/contacts' 
             element={<PrivateRoute component={Contacts} redirectTo='/login' />} /> 
           <Route path="*" element={<Navigate to="/" />} />   

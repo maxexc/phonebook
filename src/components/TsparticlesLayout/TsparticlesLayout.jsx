@@ -92,9 +92,9 @@ const TsparticlesLayout = () => {
           number: {
             density: {
               enable: true,
-              area: 800,
+              area: 1200, //800
             },
-            value: 40, 
+            value: 30, //40
           },
           opacity: {
             value: 1,

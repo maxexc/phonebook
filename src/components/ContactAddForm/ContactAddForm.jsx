@@ -120,7 +120,15 @@ export const ContactForm = () => {
           <Button
             type="submit"
             variant="contained"
-            sx={{ mr: -1, mt: "18px", width: '200px' }}
+            sx={{
+              mr: -1,
+              mt: "18px",
+              width: '200px',
+              fontFamily: 'Roboto, sans-serif', 
+              fontSize: '16px',                 
+              letterSpacing: '1px',             
+              fontWeight: '500',                
+            }}
           >
             Add contact
           </Button>  

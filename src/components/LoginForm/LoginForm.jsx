@@ -83,7 +83,15 @@ export default function LoginForm() {
             variant="standard"
             id="standard-basic"
             title="Email must contain at list '@'. For example user@mail.com"
-            sx={{ m: 1, width: '100%'  }}
+            sx={{
+              m: 1,
+              width: '100%',
+              '-webkit-appearance': 'none',
+              borderRadius: 0,
+              height: '40px',
+              boxShadow: 'none',
+              outline: 'none',
+            }}
           />
         </Box>
 
@@ -100,6 +108,13 @@ export default function LoginForm() {
               id="standard-adornment-password"
               title="Your Password must include a minimum of 7 characters"
               type={showPassword ? 'text' : 'password'}
+              sx={{
+                '-webkit-appearance': 'none',
+                borderRadius: 0,
+                height: '40px',
+                boxShadow: 'none',
+                outline: 'none',
+              }}
               endAdornment={
                 <InputAdornment position="end">
                   <IconButton

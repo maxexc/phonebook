@@ -6,13 +6,19 @@ import { Item, DeleteContact, PatchContact, Circle, ButtonsWrapper, ContactInfo,
 import { DeleteForeverOutlined, EditOutlined } from '@mui/icons-material';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Modal from 'components/Modal/Modal';  
+import Modal from 'components/Modal/Modal';
 
 export const Contact = ({ id, number, name }) => {
   const dispatch = useDispatch();
   const [isEditing, setIsEditing] = useState(false);
   const [editName, setEditName] = useState(name);
   const [editNumber, setEditNumber] = useState(number);
+
+  const openEditModal = () => {
+    setEditName(name);  
+    setEditNumber(number);  
+    setIsEditing(true);  
+  };
 
   const onPatch = () => {
     dispatch(patchContact({ id, name: editName, number: editNumber }));
@@ -37,7 +43,7 @@ export const Contact = ({ id, number, name }) => {
         </ContactInfo>
 
         <ButtonsWrapper>
-          <PatchContact type="button" onClick={() => setIsEditing(true)}>
+          <PatchContact type="button" onClick={openEditModal}>
             <EditOutlined sx={{ fontSize: 30 }} />
           </PatchContact>
 
