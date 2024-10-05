@@ -30,27 +30,33 @@ export const ContactForm = () => {
         // console.log(name, number);
     }
 
-    const handleFormSubmit = event => {
-        event.preventDefault();
-        const newContact = {
-            name,
-            number,
-            id: nanoid(),
-        };
+  const handleFormSubmit = event => {
+    event.preventDefault();
+        
+    if (name.trim() === '') {
+      toast.warn('Name cannot be empty or contain only spaces');
+      return;
+    };
 
-        const repeatCheck = contacts.find(item => item.name.toLowerCase() === newContact.name.toLowerCase());
+    const newContact = {
+      name: name.trim(),
+      number,
+      id: nanoid(),
+    };
+
+    const repeatCheck = contacts.find(item => item.name.toLowerCase() === newContact.name.toLowerCase());
     
     if (repeatCheck) {
       toast.warn(`Name  ${newContact.name}  is alredy in contacts!`);
       return;
     }
 
-        dispatch(addContact(newContact));
-        toast.success(`You have added a new contact ${newContact.name}`);
+    dispatch(addContact(newContact));
+    toast.success(`You have added a new contact ${newContact.name}`);
 
-        setName('');
-        setNumber('');
-    }
+    setName('');
+    setNumber('');
+  }
 
   return (
     <Box
