@@ -48,6 +48,10 @@ export const RegisterForm = () => {
       toast.info('Sorry, E-mail field cannot be empty');
       return;
     }
+    if (!email.includes('@')) {
+      toast.warn('Invalid e-mail address, "@" is missing');
+      return;
+    }
     if (password.length < 7) {
       toast.warn('Password must contain at least 7 characters');
       return;
@@ -84,7 +88,15 @@ export const RegisterForm = () => {
               id="outlined-start-adornment"
               pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
               title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-              sx={{ m: 1, width: '100%' }}
+              sx={{
+                m: 1,
+                width: '100%',
+                '-webkit-appearance': 'none',
+                borderRadius: 0,
+                height: '40px',
+                boxShadow: 'none',
+                outline: 'none',
+              }}
             />
           </Box>
 
@@ -99,7 +111,15 @@ export const RegisterForm = () => {
               variant="standard"
               id="standard-basic"
               title="Email must contain at list '@'. For example user@mail.com"
-              sx={{ m: 1, width: '100%'  }}
+              sx={{
+                m: 1,
+                width: '100%',
+                '-webkit-appearance': 'none',
+                borderRadius: 0,
+                height: '40px',
+                boxShadow: 'none',
+                outline: 'none',
+              }}
             />
           </Box>
 
@@ -115,6 +135,13 @@ export const RegisterForm = () => {
                 required
                 id="standard-adornment-password"
                 type={showPassword ? 'text' : 'password'}
+                sx={{
+                  '-webkit-appearance': 'none',
+                  borderRadius: 0,
+                  height: '40px',
+                  boxShadow: 'none',
+                  outline: 'none',
+                }}
                 endAdornment={
                   <InputAdornment position="end">
                     <IconButton

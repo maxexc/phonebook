@@ -1,113 +1,79 @@
-# React homework template
+# Phonebook
 
-Этот проект был создан при помощи
-[Create React App](https://github.com/facebook/create-react-app). Для знакомства
-и настройки дополнительных возможностей
-[обратись к документации](https://facebook.github.io/create-react-app/docs/getting-started).
+Phonebook is a web application that allows users to securely store, manage, and
+organize their contacts. Built with modern technologies like React, Redux, and
+Material UI, it ensures a responsive user experience with robust functionality.
 
-## Создание репозитория по шаблону
+## Features
 
-Используй этот репозиторий организации GoIT как шаблон для создания репозитория
-своего проекта. Для этого нажми на кнопку `«Use this template»` и выбери опцию
-`«Create a new repository»`, как показано на изображении.
+- User registration and login
+- Add, edit, and delete contacts
+- Search for contacts
+- Responsive design for mobile and desktop
+- API integration with persistent data storage
 
-![Creating repo from a template step 1](./assets/template-step-1.png)
+## Technologies Used
 
-На следующем шаге откроется страница создания нового репозитория. Заполни поле
-его имени, убедись что репозиторий публичный, после чего нажми кнопку
-`«Create repository from template»`.
+- React
+- Redux Toolkit
+- Redux Persist
+- React Router
+- Axios
+- Styled Components
+- Material UI
+- REST API
 
-![Creating repo from a template step 2](./assets/template-step-2.png)
+## Setup and Installation
 
-После того как репозиторий будет создан, необходимо перейти в настройки
-созданного репозитория на вкладку `Settings` > `Actions` > `General` как
-показано на изображении.
+To run the project locally, follow these steps:
 
-![Settings GitHub Actions permissions step 1](./assets/gh-actions-perm-1.png)
+1. Clone the repository:
 
-Проскролив страницу до самого конца, в секции `«Workflow permissions»` выбери
-опцию `«Read and write permissions»` и поставь галочку в чекбоксе. Это
-необходимо для автоматизации процесса деплоя проекта.
+   ```bash
+   git clone https://github.com/maxexc/phonebook.git
+   ```
 
-![Settings GitHub Actions permissions step 2](./assets/gh-actions-perm-2.png)
+2. Install dependencies:
 
-Теперь у тебя есть личный репозиторий проекта, со структурой файлов и папок
-репозитория-шаблона. Далее работай с ним как с любым другим личным репозиторием,
-клонируй его себе на компьютер, пиши код, делай коммиты и отправляй их на
-GitHub.
+   ```bash
+   npm install
+   ```
 
-## Подготовка к работе
+3. Create a `.env` file at the root of the project with the following variable:
 
-1. Убедись что на компьютере установлена LTS-версия Node.js.
-   [Скачай и установи](https://nodejs.org/en/) её если необходимо.
-2. Установи базовые зависимости проекта командой `npm install`.
-3. Запусти режим разработки, выполнив команду `npm start`.
-4. Перейди в браузере по адресу [http://localhost:3000](http://localhost:3000).
-   Эта страница будет автоматически перезагружаться после сохранения изменений в
-   файлах проекта.
+   ```bash
+   REACT_APP_API_URL=https://connections-api.goit.global/
+   ```
 
-## Деплой
+4. Run the project:
 
-Продакшн версия проекта будет автоматически проходить линтинг, собираться и
-деплоиться на GitHub Pages, в ветку `gh-pages`, каждый раз когда обновляется
-ветка `main`. Например, после прямого пуша или принятого пул-реквеста. Для этого
-необходимо в файле `package.json` отредактировать поле `homepage`, заменив
-`your_username` и `your_repo_name` на свои, и отправить изменения на GitHub.
+   ```bash
+   npm start
+   ```
 
-```json
-"homepage": "https://your_username.github.io/your_repo_name/"
-```
+5. Open [http://localhost:3000](http://localhost:3000) to view it in the
+   browser.
 
-Далее необходимо зайти в настройки GitHub-репозитория (`Settings` > `Pages`) и
-выставить раздачу продакшн версии файлов из папки `/root` ветки `gh-pages`, если
-это небыло сделано автоматически.
+## Deployment
 
-![GitHub Pages settings](./assets/repo-settings.png)
+The project is deployed using GitHub Pages. Follow these steps to deploy:
 
-### Статус деплоя
+1. Build the project:
 
-Статус деплоя крайнего коммита отображается иконкой возле его идентификатора.
+   ```bash
+   npm run build
+   ```
 
-- **Желтый цвет** - выполняется сборка и деплой проекта.
-- **Зеленый цвет** - деплой завершился успешно.
-- **Красный цвет** - во время линтинга, сборки или деплоя произошла ошибка.
+2. Deploy to GitHub Pages using GitHub Actions: Ensure that the correct base URL
+   is set in `BrowserRouter` if deploying to a subdirectory.
 
-Более детальную информацию о статусе можно посмотреть кликнув по иконке, и в
-выпадающем окне перейти по ссылке `Details`.
+3. Visit your deployed application at:  
+   [Live Demo](https://maxexc.github.io/phonebook)
 
-![Deployment status](./assets/deploy-status.png)
+## Contribution
 
-### Живая страница
+Feel free to submit issues and pull requests to improve this project.
 
-Через какое-то время, обычно пару минут, живую страницу можно будет посмотреть
-по адресу указанному в отредактированном свойстве `homepage`. Например, вот
-ссылка на живую версию для этого репозитория
-[https://goitacademy.github.io/react-homework-template](https://goitacademy.github.io/react-homework-template).
+## License
 
-Если открывается пустая страница, убедись что во вкладке `Console` нет ошибок
-связанных с неправильными путями к CSS и JS файлам проекта (**404**). Скорее
-всего у тебя неправильное значение свойства `homepage` в файле `package.json`.
-
-### Маршрутизация
-
-Если приложение использует библиотеку `react-router-dom` для маршрутизации,
-необходимо дополнительно настроить компонент `<BrowserRouter>`, передав в пропе
-`basename` точное название твоего репозитория. Слеш в начале строки обязателен.
-
-```jsx
-<BrowserRouter basename="/your_repo_name">
-  <App />
-</BrowserRouter>
-```
-
-## Как это работает
-
-![How it works](./assets/how-it-works.png)
-
-1. После каждого пуша в ветку `main` GitHub-репозитория, запускается специальный
-   скрипт (GitHub Action) из файла `.github/workflows/deploy.yml`.
-2. Все файлы репозитория копируются на сервер, где проект инициализируется и
-   проходит линтинг и сборку перед деплоем.
-3. Если все шаги прошли успешно, собранная продакшн версия файлов проекта
-   отправляется в ветку `gh-pages`. В противном случае, в логе выполнения
-   скрипта будет указано в чем проблема.
+This project is licensed under the MIT License.

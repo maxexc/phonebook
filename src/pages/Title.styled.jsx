@@ -2,8 +2,9 @@ import styled from 'styled-components';
 // import image from '../images/background.jpg'
 
 export const Title = styled.h1`
-  font-family: 'Handlee', cursive;
+  font-family: 'Roboto';
   font-size: 24px;
+  letter-spacing: 1px;
   text-align: center;
   margin-bottom: 20px;
   width: 180px;
@@ -13,8 +14,9 @@ export const Title = styled.h1`
 `;
 
 export const TitleLogin = styled.h1`
-  font-family: 'Handlee', cursive;
+  font-family: 'Roboto';
   font-size: 24px;
+  letter-spacing: 1px;
   text-align: center;
   margin-bottom: 20px;
   width: 80px;
