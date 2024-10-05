@@ -13,11 +13,11 @@ export const UserMenu = () => {
     <Stack direction="row" spacing={1} alignItems="center">
       <Typography
         sx={{ 
-          fontFamily: 'Roboto, sans-serif',  // Стандартный и более профессиональный шрифт
+          fontFamily: 'Roboto, sans-serif',  
           textAlign: 'end', 
-          fontSize: '15px',                   // Стандартный размер текста
-          fontWeight: '500',                  // Четкость выделения, но не перегруженность
-          letterSpacing: '1px',               // Легкое межбуквенное расстояние
+          fontSize: '15px',                   
+          fontWeight: '500',                  
+          letterSpacing: '1px',               
           color: 'var(--background-color)',
           textShadow: '1px 1px 2px black',
         }}
