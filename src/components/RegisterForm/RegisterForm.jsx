@@ -35,8 +35,12 @@ export const RegisterForm = () => {
       default:
         return;
     };
-}
-      
+  }
+  
+  const validateEmail = (email) => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+  };      
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -48,8 +52,8 @@ export const RegisterForm = () => {
       toast.info('Sorry, E-mail field cannot be empty');
       return;
     }
-    if (!email.includes('@')) {
-      toast.warn('Invalid e-mail address, "@" is missing');
+    if (!validateEmail(email)) {
+      toast.warn('Invalid e-mail address. Please use a valid format: "user@mail.com"');
       return;
     }
     if (password.length < 7) {
@@ -111,6 +115,7 @@ export const RegisterForm = () => {
               variant="standard"
               id="standard-basic"
               title="Email must contain at list '@'. For example user@mail.com"
+              inputProps={{ inputMode: 'email', autoComplete: 'email' }}
               sx={{
                 m: 1,
                 width: '100%',
